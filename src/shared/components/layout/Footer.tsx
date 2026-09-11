@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Contenedor } from "@/shared/components/ui/Contenedor";
-import { negocio, enlaceWhatsApp } from "@/shared/config/negocio";
+import { enlaceWhatsApp, mensajeConsulta, negocio } from "@/shared/config/negocio";
 import { BotonEnlace } from "@/shared/components/ui/Boton";
 import { IconoCarrito } from "@/shared/components/ui/Iconos";
 import { BotonCompartir, IconoCompartir } from "@/shared/components/ui/BotonCompartir";
@@ -50,7 +50,7 @@ export function Footer() {
               {negocio.ciudad}, {negocio.provincia}
             </address>
             <a
-              href={enlaceWhatsApp()}
+              href={enlaceWhatsApp(mensajeConsulta())}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-block text-sm font-semibold text-acento-alt hover:underline"

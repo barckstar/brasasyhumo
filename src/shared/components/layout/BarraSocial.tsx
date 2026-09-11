@@ -5,7 +5,12 @@ import {
   IconoWhatsApp,
   IconoMapa,
 } from "@/shared/components/ui/Iconos";
-import { enlaceMapa, enlaceWhatsApp, negocio } from "@/shared/config/negocio";
+import {
+  enlaceMapa,
+  enlaceWhatsApp,
+  mensajeConsulta,
+  negocio,
+} from "@/shared/config/negocio";
 import { BotonCompartir, IconoCompartir } from "@/shared/components/ui/BotonCompartir";
 
 /**
@@ -28,11 +33,7 @@ const redes = [
       desde aqui o desde alla llegue igual.
     */
     nombre: "WhatsApp",
-    href: enlaceWhatsApp(
-      negocio.modoMuestra
-        ? negocio.mensajeContacto
-        : `Hola ${negocio.nombre}, quiero hacer un pedido.`,
-    ),
+    href: enlaceWhatsApp(mensajeConsulta()),
     Icono: IconoWhatsApp,
   },
   { nombre: "Instagram", href: negocio.instagram, Icono: IconoInstagram },

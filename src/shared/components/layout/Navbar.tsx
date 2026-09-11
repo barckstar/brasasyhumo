@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Contenedor } from "@/shared/components/ui/Contenedor";
 import { BotonEnlace } from "@/shared/components/ui/Boton";
 import { useNavbarOculto } from "@/shared/lib/useNavbarOculto";
-import { negocio, enlaceWhatsApp } from "@/shared/config/negocio";
+import { enlaceWhatsApp, mensajeConsulta, negocio } from "@/shared/config/negocio";
 import { SwitchVista } from "./SwitchVista";
 
 const enlaces = [
@@ -130,7 +130,7 @@ export function Navbar() {
             </Link>
           ))}
           <BotonEnlace
-            href={enlaceWhatsApp(`Hola ${negocio.nombre}, tengo una consulta.`)}
+            href={enlaceWhatsApp(mensajeConsulta())}
             variante="contorno"
             tamano="lg"
             className="mt-2 w-full"

@@ -1,7 +1,7 @@
 import { Seccion } from "@/shared/components/ui/Seccion";
 import { BotonEnlace } from "@/shared/components/ui/Boton";
 import { IconoWhatsApp, IconoCarrito } from "@/shared/components/ui/Iconos";
-import { negocio, enlaceWhatsApp } from "@/shared/config/negocio";
+import { enlaceWhatsApp, mensajeConsulta, negocio } from "@/shared/config/negocio";
 import { MapaLocal } from "./MapaLocal";
 
 export function Ubicacion() {
@@ -52,7 +52,7 @@ export function Ubicacion() {
               Hacer pedido
             </BotonEnlace>
             <BotonEnlace
-              href={enlaceWhatsApp(`Hola ${negocio.nombre}, tengo una consulta.`)}
+              href={enlaceWhatsApp(mensajeConsulta())}
               variante="contorno"
               tamano="lg"
             >

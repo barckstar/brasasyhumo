@@ -23,7 +23,10 @@ DESTINO = "public/marca"
 NEGRO = (5, 5, 5)
 SUPERFICIE = (26, 15, 13)
 NARANJA = (227, 81, 32)
-NARANJA_CLARO = (240, 160, 93)
+# El corazon de la llama va en el naranja INTERMEDIO, no en `acento-claro`.
+# Con el claro (#F0A05D) el centro salia salmon palido y a 40px el emblema se
+# leia amarillento y lavado, no como fuego.
+NARANJA_MEDIO = (232, 119, 31)
 BLANCO = (255, 253, 252)
 TEXTO_SUAVE = (217, 201, 194)
 
@@ -71,7 +74,7 @@ def emblema(tam: int) -> Image.Image:
     d.ellipse([m, m, t - m, t - m], fill=SUPERFICIE, outline=NARANJA, width=int(t * 0.055))
     llama(d, t / 2, t * 0.46, t * 0.52, NARANJA)
     # La segunda llama, mas chica y clara, da el corazon de la brasa.
-    llama(d, t / 2, t * 0.52, t * 0.30, NARANJA_CLARO)
+    llama(d, t / 2, t * 0.52, t * 0.30, NARANJA_MEDIO)
     return im.resize((tam, tam), Image.LANCZOS)
 
 
@@ -87,7 +90,7 @@ def open_graph() -> Image.Image:
         t = max(0.0, (y - h * 0.45) / (h * 0.55))
         d.line([(0, y), (w, y)], fill=(int(5 + 38 * t * t), int(5 + 13 * t * t), int(5 + 7 * t * t)))
     llama(d, w * 0.155, h * 0.46, h * 0.40, NARANJA)
-    llama(d, w * 0.155, h * 0.52, h * 0.23, NARANJA_CLARO)
+    llama(d, w * 0.155, h * 0.52, h * 0.23, NARANJA_MEDIO)
     d.text((w * 0.285, h * 0.40), NOMBRE, font=ImageFont.truetype(TITULAR, int(h * 0.155)), fill=BLANCO, anchor="lm")
     d.text((w * 0.285, h * 0.56), TAGLINE, font=ImageFont.truetype(TITULAR, int(h * 0.062)), fill=NARANJA, anchor="lm")
     d.text((w * 0.285, h * 0.68), CIUDAD, font=ImageFont.truetype(CUERPO, int(h * 0.045)), fill=TEXTO_SUAVE, anchor="lm")

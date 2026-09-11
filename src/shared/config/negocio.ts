@@ -168,3 +168,16 @@ export function enlaceMapa(): string {
   const consulta = encodeURIComponent(`${negocio.nombre} ${negocio.ciudad}`);
   return `https://www.google.com/maps/search/?api=1&query=${consulta}`;
 }
+
+/**
+ * El texto por defecto de TODOS los botones de WhatsApp del sitio.
+ *
+ * Centralizado a proposito: estaba escrito a mano en el navbar, en ubicacion y
+ * en la barra lateral, asi que al cambiar el mensaje habia que acordarse de
+ * tres sitios — y uno se quedo atras.
+ */
+export function mensajeConsulta(): string {
+  return negocio.modoMuestra
+    ? negocio.mensajeContacto
+    : `Hola ${negocio.nombre}, tengo una consulta.`;
+}
