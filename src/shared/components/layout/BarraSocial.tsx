@@ -1,6 +1,7 @@
 import {
   IconoFacebook,
   IconoInstagram,
+  IconoLinkedIn,
   IconoWhatsApp,
   IconoMapa,
 } from "@/shared/components/ui/Iconos";
@@ -21,17 +22,23 @@ import { BotonCompartir, IconoCompartir } from "@/shared/components/ui/BotonComp
  */
 const redes = [
   {
+    /*
+      En modo muestra el mensaje es de contacto, no un pedido: ver negocio.ts.
+      Se usa el mismo texto que el boton del checkout para que quien escriba
+      desde aqui o desde alla llegue igual.
+    */
     nombre: "WhatsApp",
-    href: enlaceWhatsApp(`Hola ${negocio.nombre}, quiero hacer un pedido.`),
+    href: enlaceWhatsApp(
+      negocio.modoMuestra
+        ? negocio.mensajeContacto
+        : `Hola ${negocio.nombre}, quiero hacer un pedido.`,
+    ),
     Icono: IconoWhatsApp,
   },
   { nombre: "Instagram", href: negocio.instagram, Icono: IconoInstagram },
   { nombre: "Facebook", href: negocio.facebook, Icono: IconoFacebook },
-  {
-    nombre: "Cómo llegar",
-    href: enlaceMapa(),
-    Icono: IconoMapa,
-  },
+  { nombre: "LinkedIn", href: negocio.linkedin, Icono: IconoLinkedIn },
+  { nombre: "Cómo llegar", href: enlaceMapa(), Icono: IconoMapa },
 ] as const;
 
 export function BarraSocial() {

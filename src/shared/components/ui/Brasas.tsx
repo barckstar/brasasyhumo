@@ -15,7 +15,7 @@
 const GAMA = [
   { color: "#FFD9A0", brillo: "rgba(255,217,160,0.85)" }, // amarillo incandescente
   { color: "#F0A05D", brillo: "rgba(240,160,93,0.8)" }, // naranja claro
-  { color: "#E8771F", brillo: "rgba(232,119,31,0.75)" }, // ambar
+  { color: "#E8771F", brillo: "rgba(232,119,31,0.75)" }, // naranja
   { color: "#E35120", brillo: "rgba(227,81,32,0.7)" }, // naranja fuego
   { color: "#C03018", brillo: "rgba(192,48,24,0.6)" }, // rojo brasa
   { color: "#A01010", brillo: "rgba(160,16,16,0.5)" }, // rescoldo

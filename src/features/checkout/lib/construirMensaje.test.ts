@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { construirMensaje, LIMITE_SEGURO } from "./construirMensaje";
+import { construirMensajePedido, LIMITE_SEGURO } from "./construirMensaje";
 import type { LineaCarrito } from "@/shared/types/carrito";
 import type { DatosPedido } from "../schema";
 
@@ -35,35 +35,35 @@ const express: DatosPedido = {
 
 describe("construirMensaje", () => {
   it("incluye cada linea con su cantidad", () => {
-    const { texto } = construirMensaje([linea("a", 2)], retiro, 17000);
+    const { texto } = construirMensajePedido([linea("a", 2)], retiro, 17000);
     expect(texto).toContain("2x Plato a");
   });
 
   it("incluye el total formateado en colones", () => {
-    const { texto } = construirMensaje([linea("a", 2)], retiro, 17000);
+    const { texto } = construirMensajePedido([linea("a", 2)], retiro, 17000);
     expect(texto).toContain("₡17.000");
   });
 
   it("incluye la nota de una linea cuando existe", () => {
     const conNota: LineaCarrito = { ...linea("a", 1), nota: "sin cebolla" };
-    const { texto } = construirMensaje([conNota], retiro, 8500);
+    const { texto } = construirMensajePedido([conNota], retiro, 8500);
     expect(texto).toContain("sin cebolla");
   });
 
   it("omite la direccion cuando es retiro", () => {
-    const { texto } = construirMensaje([linea("a", 1)], retiro, 8500);
+    const { texto } = construirMensajePedido([linea("a", 1)], retiro, 8500);
     expect(texto).not.toContain("Barrio");
   });
 
   it("incluye la direccion cuando es express", () => {
-    const { texto } = construirMensaje([linea("a", 1)], express, 8500);
+    const { texto } = construirMensajePedido([linea("a", 1)], express, 8500);
     expect(texto).toContain("Barrio Los Ángeles, casa azul");
   });
 
   it("mide el largo YA CODIFICADO, no el crudo", () => {
     // Los acentos y el simbolo de colon se expanden al codificar; si se midiera
     // texto.length se subestimaria el tamano real de la URL.
-    const { texto, largoCodificado } = construirMensaje(
+    const { texto, largoCodificado } = construirMensajePedido(
       [linea("a", 1)],
       express,
       8500,
@@ -76,7 +76,7 @@ describe("construirMensaje", () => {
     const muchas = Array.from({ length: 40 }, (_, i) =>
       linea(`plato-numero-${i}`, 3),
     );
-    const { excedeLimite, largoCodificado } = construirMensaje(
+    const { excedeLimite, largoCodificado } = construirMensajePedido(
       muchas,
       express,
       999000,
@@ -87,7 +87,7 @@ describe("construirMensaje", () => {
 
   it("incluye el metodo de pago elegido", () => {
     const conSinpe: DatosPedido = { ...retiro, metodoPago: "sinpe" };
-    const { texto } = construirMensaje([linea("a", 1)], conSinpe, 8500);
+    const { texto } = construirMensajePedido([linea("a", 1)], conSinpe, 8500);
     expect(texto).toContain("Pago: Sinpe Móvil");
   });
 
@@ -97,12 +97,12 @@ describe("construirMensaje", () => {
       lat: 10.0898297,
       lng: -84.4743896,
     };
-    const { texto } = construirMensaje([linea("a", 1)], conUbicacion, 8500);
+    const { texto } = construirMensajePedido([linea("a", 1)], conUbicacion, 8500);
     expect(texto).toContain("maps.google.com/?q=10.089830,-84.474390");
   });
 
   it("no incluye enlace de ubicacion si no hay coordenadas", () => {
-    const { texto } = construirMensaje([linea("a", 1)], express, 8500);
+    const { texto } = construirMensajePedido([linea("a", 1)], express, 8500);
     expect(texto).not.toContain("maps.google.com");
   });
 
@@ -114,12 +114,12 @@ describe("construirMensaje", () => {
       lat: 10.08,
       lng: -84.47,
     };
-    const { texto } = construirMensaje([linea("a", 1)], retiroConCoords, 8500);
+    const { texto } = construirMensajePedido([linea("a", 1)], retiroConCoords, 8500);
     expect(texto).not.toContain("maps.google.com");
   });
 
   it("no marca excedeLimite en un pedido normal", () => {
-    const { excedeLimite } = construirMensaje(
+    const { excedeLimite } = construirMensajePedido(
       [linea("a", 2), linea("b", 1)],
       express,
       25500,

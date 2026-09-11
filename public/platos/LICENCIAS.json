@@ -1,0 +1,10 @@
+[
+  {
+    "_nota": "Fondo del hero. Licencia Pexels: uso comercial, sin atribucion obligatoria.",
+    "archivo": "hero-fondo.webp",
+    "titulo": "Grilled meat on black charcoal grill at nighttime",
+    "pexels_id": 1481284,
+    "url": "https://www.pexels.com/photo/grilled-meat-on-black-charcoal-grill-at-nighttime-1481284/",
+    "_receta": "scripts/optimizar-hero.py — 400px, calidad 40, desenfoque 0.6, brillo 0.75"
+  }
+]

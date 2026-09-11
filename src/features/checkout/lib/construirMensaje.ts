@@ -18,7 +18,40 @@ type MensajePedido = {
   excedeLimite: boolean;
 };
 
-export function construirMensaje(
+/**
+ * El sitio donde vive esta muestra. Va dentro del mensaje de contacto para que
+ * quien lo reciba sepa de cual de sus paginas vino.
+ */
+const SITIO =
+  process.env.NEXT_PUBLIC_SITIO_URL ?? "https://brasa-y-humo.vercel.app";
+
+function medir(texto: string): MensajePedido {
+  const largoCodificado = encodeURIComponent(texto).length;
+  return { texto, largoCodificado, excedeLimite: largoCodificado > LIMITE_SEGURO };
+}
+
+/**
+ * El mensaje de una MUESTRA: contacto comercial, no un pedido.
+ *
+ * Brasa & Humo no existe, asi que no hay cocina que reciba nada. Quien pulse
+ * el boton le escribe al estudio que hizo la pagina, que es para lo que sirve
+ * esta demo.
+ */
+function construirMensajeContacto(): MensajePedido {
+  return medir(`${negocio.mensajeContacto}
+
+${SITIO}`);
+}
+
+/**
+ * El pedido de verdad.
+ *
+ * Vive en su PROPIA funcion exportada y no detras de un `if`, porque asi sus
+ * pruebas lo ejercitan SIEMPRE, encendido o apagado el modo muestra. Metido
+ * dentro del `if` las siete pruebas del pedido pasaban a medir el mensaje de
+ * contacto y dejaban de cubrir nada — paso de verdad al primer intento.
+ */
+export function construirMensajePedido(
   lineas: LineaCarrito[],
   datos: DatosPedido,
   totalPedido: number,
@@ -77,4 +110,18 @@ export function construirMensaje(
 export function enviarPorWhatsApp(texto: string): void {
   const url = `https://wa.me/${negocio.whatsapp}?text=${encodeURIComponent(texto)}`;
   window.open(url, "_blank", "noopener,noreferrer");
+}
+
+/**
+ * Lo que usa el checkout. Elige segun `negocio.modoMuestra`: en una muestra,
+ * contacto; en el sitio de un cliente real, el pedido completo.
+ */
+export function construirMensaje(
+  lineas: LineaCarrito[],
+  datos: DatosPedido,
+  totalPedido: number,
+): MensajePedido {
+  return negocio.modoMuestra
+    ? construirMensajeContacto()
+    : construirMensajePedido(lineas, datos, totalPedido);
 }

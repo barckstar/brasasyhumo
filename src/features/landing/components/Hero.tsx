@@ -80,30 +80,20 @@ export function Hero() {
             shift de la pagina (CLS 0,111). Con `fill` el hueco queda reservado
             desde el primer pintado.
 
-            EL ENCUADRE CAMBIA EN MOVIL, y no es capricho. En esta foto el
-            sujeto vive entre el 55% y el 100% del ancho; la mitad izquierda es
-            negro a proposito, que es donde va el titular.
+            ENCUADRE CENTRADO, y esto ANTES NO SE PODIA.
 
-            En una pantalla alta `object-cover` escala para cubrir el alto y
-            recorta a lo ancho: en 375x758 solo queda visible del 36% al 64% del
-            original, o sea negro y un pedazo de tronco. Corriendo el encuadre
-            entra la hamburguesa.
+            Con el acento naranja el antetitulo —ambar a 12px, o sea texto
+            normal, que necesita 4.5:1— caia por debajo del minimo en cuanto la
+            foto aclaraba, y habia que correr el encuadre al 65% para meterlo
+            sobre una zona oscura.
 
-            EL 65% ESTA MEDIDO, no elegido a ojo. El antetitulo va en naranja a
-            12px, o sea texto normal, que necesita 4.5:1. Se probo primero con
-            75% y el antetitulo caia justo sobre el pan: el peor pixel de esa
-            zona compuesto al 17% sobre `base` da 4.44:1 — FALLA. Con 65% la
-            ventana es 47%-75%, el antetitulo vuelve a caer sobre negro y el
-            contraste sube a 5.31:1, que es practicamente el maximo posible
-            sobre el fondo plano (5.33:1). La hamburguesa sigue entrando.
+            Con el ambar de la paleta nueva el peor pixel de TODA la foto da
+            7.21:1. Ya no hay que esquivar nada: el encuadre se elige por como
+            se ve, no para salvar el contraste.
 
-            Si algun dia se cambia esta foto, HAY QUE VOLVER A MEDIR: el numero
-            depende de donde caiga la zona clara, no de la foto en abstracto.
-
-            Desde `sm` la seccion ya es lo bastante ancha para que la foto quepa
-            completa, y ahi el centro es el encuadre correcto.
+            Si se cambia la foto del hero o el color de acento, VOLVER A MEDIR.
           */
-          className="object-cover object-[65%_center] sm:object-center"
+          className="object-cover"
         />
       </div>
 
@@ -130,7 +120,14 @@ export function Hero() {
           <Revelar direccion="izquierda" inmediato>
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-acento" aria-hidden="true" />
-            <span className="font-display text-xs font-semibold uppercase tracking-[0.32em] text-acento">
+            {/*
+              SOMBRA PROPIA, no decorativa. Este antetitulo es naranja a 12px
+              —texto normal, necesita 4.5:1— y el naranja de la paleta parte de
+              5.30:1 sobre el fondo plano: encima de una foto el margen se agota
+              en cuanto la imagen aclara. Con sombra el texto se separa de
+              cualquier fondo y el encuadre vuelve a ser una decision de diseno.
+            */}
+            <span className="font-display text-xs font-semibold uppercase tracking-[0.32em] text-acento drop-shadow-[0_1px_4px_rgba(5,5,5,0.95)]">
               {negocio.ciudad} · {negocio.provincia}
             </span>
           </div>
@@ -144,7 +141,7 @@ export function Hero() {
           </Revelar>
 
           <Revelar retraso={0.2} inmediato>
-            <p className="mt-7 max-w-md text-lg leading-relaxed text-texto-suave sm:text-xl">
+            <p className="mt-7 max-w-md text-lg leading-relaxed text-texto-suave drop-shadow-[0_1px_4px_rgba(5,5,5,0.9)] sm:text-xl">
               {negocio.tagline}
             </p>
           </Revelar>

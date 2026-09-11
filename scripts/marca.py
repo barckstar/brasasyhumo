@@ -23,7 +23,7 @@ DESTINO = "public/marca"
 NEGRO = (5, 5, 5)
 SUPERFICIE = (26, 15, 13)
 NARANJA = (227, 81, 32)
-NARANJA_CLARO = (232, 119, 31)
+NARANJA_CLARO = (240, 160, 93)
 BLANCO = (255, 253, 252)
 TEXTO_SUAVE = (217, 201, 194)
 
@@ -94,12 +94,32 @@ def open_graph() -> Image.Image:
     return im.resize((1200, 630), Image.LANCZOS)
 
 
+def favicon() -> None:
+    """
+    `src/app/favicon.ico` MANDA sobre los iconos del metadata: Next lo sirve
+    como `/favicon.ico` y el navegador lo prefiere. Si se olvida, la pestana
+    sigue mostrando el icono del proyecto anterior aunque `public/marca/` este
+    al dia. Paso de verdad.
+    """
+    # RGBA OBLIGATORIO: el decodificador de Next rechaza el .ico si los PNG de
+    # adentro van en RGB — "The PNG is not in RGBA format!" y el build se cae.
+    ims = [emblema(t).convert("RGBA") for t in (16, 32, 48, 64)]
+    ims[0].save(
+        "src/app/favicon.ico",
+        format="ICO",
+        sizes=[(16, 16), (32, 32), (48, 48), (64, 64)],
+        append_images=ims[1:],
+    )
+    print(f"  favicon.ico          {round(os.path.getsize('src/app/favicon.ico') / 1024)} KB")
+
+
 def main() -> None:
     os.makedirs(DESTINO, exist_ok=True)
     for nombre, tam in [("icon-512", 512), ("icon-192", 192), ("apple-icon", 180), ("icon", 32)]:
         emblema(tam).save(f"{DESTINO}/{nombre}.png")
     emblema(400).save(f"{DESTINO}/logo.jpg", quality=92)
     open_graph().save(f"{DESTINO}/og.jpg", quality=88)
+    favicon()
     for f in sorted(os.listdir(DESTINO)):
         print(f"  {f:20s} {round(os.path.getsize(f'{DESTINO}/{f}') / 1024)} KB")
 

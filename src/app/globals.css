@@ -2,22 +2,21 @@
 
 /*
   Paleta Brasa & Humo — reparto 70/30/10.
-  La marca es la llama sobre negro: el 70% es negro real, el 30% superficies
-  apenas cálidas y el 10% el naranja de la brasa.
 
-  REGLAS DE CONTRASTE (medidas, no estimadas):
-    acento      sobre base      = 4.88:1  -> texto normal permitido
-    acento      sobre base-alt  = 4.33:1  -> SOLO texto grande; usar acento-alt (5.62:1)
-    acento-alt  sobre base      = 6.33:1  -> seguro en todo tamano
-    texto       sobre base      = 18.50:1 -> texto de cuerpo
-    superficie-alt como texto   = 2.49:1  -> NUNCA como texto, solo superficie
+  CONTRASTE MEDIDO, no estimado, sobre el fondo base #050505:
+    acento        #E35120 ->  5.30:1   texto normal, justo por encima del 4.5
+    acento-alt    #E8771F ->  6.88:1   sobre superficies del 30%
+    texto         #FFFDFC -> 20.10:1   cuerpo
+    brasa         #A01010 ->  2.50:1   DECORATIVO, NUNCA TEXTO
 
-  OJO CON LOS DEGRADADOS: el hero pasa por #963316 y #5B260D. Sobre esos,
-  acento-alt cae a 2.55:1 y 4.10:1 — ilegible. Sobre cualquier superficie del
-  30% o cualquier degradado, el texto va BLANCO (7.44:1 y 11.98:1). El naranja
-  como texto solo sobre el fondo base plano.
+  OJO: 5.30:1 es POCO MARGEN para texto chico sobre foto. El antetitulo del
+  hero va a 12px, y en cuanto la imagen de fondo aclara se come el margen: hay
+  que medir el encuadre, no elegirlo a ojo. Ver el comentario de Hero.tsx.
+
+  Sobre cualquier superficie del 30%, sobre un degradado o encima de una foto,
+  el texto de cuerpo va BLANCO. El naranja como texto solo sobre el fondo base
+  plano o con sombra propia.
 */
-
 @theme {
   /* ---- 70% dominante: NEGRO. Nada de cafe. ---- */
   --color-base: #050505;
@@ -28,7 +27,7 @@
   --color-superficie-alt: #2a1512;
   --color-borde: #33201c;
 
-  /* ---- rojo profundo de la llama del logo, acento secundario ---- */
+  /* ---- rojo profundo de la llama, acento secundario decorativo ---- */
   --color-brasa: #a01010;
 
   /* ---- 10% acento: CTAs, precios, badges, estado activo ---- */
@@ -159,14 +158,26 @@ body {
 .barra-social {
   animation: barra-social-entra 0.8s ease-out 1s both;
 }
+
+/*
+  LA ANIMACION SOLO MUEVE EN X. El centrado vertical NO va aqui.
+
+  Tailwind v4 aplica `-translate-y-1/2` con la propiedad CSS `translate`, no
+  con `transform`. Son propiedades DISTINTAS y el navegador las compone: si el
+  keyframe tambien pone `translateY(-50%)`, la barra se corre el 100% de su
+  alto en vez del 50% y queda descuadrada hacia arriba.
+
+  Medido en 1440x900 con seis iconos: `top` calculaba 450px y la barra
+  aparecia en 107 en vez de 278. Cuantos mas iconos, mas alta y mas evidente.
+*/
 @keyframes barra-social-entra {
   from {
     opacity: 0;
-    transform: translateX(90px) translateY(-50%);
+    transform: translateX(90px);
   }
   to {
     opacity: 1;
-    transform: translateX(0) translateY(-50%);
+    transform: translateX(0);
   }
 }
 .icono-social {

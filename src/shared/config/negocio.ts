@@ -7,13 +7,15 @@
  *
  * Por eso hay decisiones que parecen descuidos y no lo son:
  *
- *   - EL TELEFONO ES INVALIDO A PROPOSITO. En Costa Rica ningun numero
- *     empieza por 0, asi que `00000000` no puede sonarle a nadie. Un numero
- *     "verosimil" en una demo que circula termina haciendo sonar el telefono
- *     de un desconocido, y eso es peor que un enlace que no abre.
+ *   - EL WHATSAPP Y LAS REDES SON LOS DEL ESTUDIO, no de un restaurante
+ *     inventado. Esta muestra circula para conseguir clientes: quien la vea y
+ *     escriba tiene que llegarle a quien la hizo. Poner un numero inventado
+ *     "verosimil" ademas terminaria haciendo sonar el telefono de un
+ *     desconocido.
  *
- *   - LAS REDES APUNTAN A LA RAIZ de cada plataforma, sin usuario. Un
- *     @brasayhumo inventado puede pertenecer a alguien.
+ *   - POR ESO EL BOTON NO MANDA UN PEDIDO. Con `modoMuestra` el mensaje de
+ *     WhatsApp es de contacto comercial. El armado del pedido real sigue
+ *     compilado y probado detras de la bandera: ver `construirMensaje`.
  *
  *   - NO HAY FICHA DE GOOGLE. Un negocio inventado no tiene CID ni Place ID;
  *     inventarlos apuntaria a la ficha de otro local. Los enlaces de resenas
@@ -46,26 +48,41 @@ export const negocio = {
    */
   nombreHero: { linea1: "Brasa &", linea2: "Humo" },
 
-  /**
-   * INVALIDO A PROPOSITO: en Costa Rica no hay numeros que empiecen por 0.
-   * El enlace de WhatsApp se arma igual y el flujo completo se puede enseñar,
-   * pero no le suena el telefono a nadie.
-   */
-  whatsapp: "50600000000",
-  whatsappVisible: "0000-0000",
+  /** WhatsApp del ESTUDIO, no de un restaurante: ver el aviso de arriba. */
+  whatsapp: "50660692197",
+  whatsappVisible: "6069-2197",
 
-  direccion: "Dirección de muestra, San José, Costa Rica",
-  ciudad: "San José",
+  /**
+   * `true` = esta es una muestra: el boton de WhatsApp manda un mensaje de
+   * contacto, no un pedido. `false` = sitio de un cliente real y vuelve a
+   * armarse el pedido completo con sus lineas, su total y su direccion.
+   *
+   * Una BANDERA y no codigo comentado: comentado se pudre y nadie sabe si
+   * todavia compila. Asi las dos ramas se compilan y se prueban siempre.
+   */
+  modoMuestra: true,
+
+  /** El mensaje que llega cuando `modoMuestra` esta encendido. */
+  mensajeContacto:
+    "Hola, vi la página de Brasa & Humo y me gustaría trabajar con usted.",
+
+  /*
+    Ciudad y provincia NO pueden ser la misma: el antetitulo del hero las pinta
+    como "CIUDAD · PROVINCIA" y salia "SAN JOSÉ · SAN JOSÉ".
+  */
+  direccion: "Dirección de muestra, Escazú, San José",
+  ciudad: "Escazú",
   provincia: "San José",
   pais: "CR",
 
-  /** Sin usuario: un @ inventado puede ser de otra persona. */
-  facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com/",
-  instagramHandle: "@brasayhumo",
+  /* Redes del ESTUDIO: quien vea la muestra y quiera trabajar, llega aqui. */
+  facebook: "https://www.facebook.com/leonelbstar",
+  instagram: "https://www.instagram.com/leonelbstar",
+  linkedin: "https://www.linkedin.com/in/leo-cas/",
+  instagramHandle: "@leonelbstar",
 
-  /** Punto generico del centro de San Jose. No es la direccion de nadie. */
-  coordenadas: { lat: 9.9333, lng: -84.0833 },
+  /** Punto generico de Escazu. No es la direccion de nadie. */
+  coordenadas: { lat: 9.9189, lng: -84.1417 },
 
   /**
    * Un negocio inventado no tiene ficha de Google. `cid` en null hace que los
