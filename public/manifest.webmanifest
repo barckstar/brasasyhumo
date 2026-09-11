@@ -1,0 +1,24 @@
+{
+  "name": "Brasa & Humo",
+  "short_name": "Brasa & Humo",
+  "description": "Parrilla y ahumados en San José. Pida en línea y coordinamos por WhatsApp.",
+  "lang": "es-CR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/marca/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/marca/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

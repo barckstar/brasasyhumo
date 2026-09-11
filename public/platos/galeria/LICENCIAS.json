@@ -1,0 +1,755 @@
+[
+  {
+    "_nota": "Fotos verticales de Pexels. Licencia Pexels: uso comercial, atribucion NO obligatoria, prohibido revender copias sin alterar. Verificada el 2026-09-09 en https://www.pexels.com/license/",
+    "_pendiente": "SON DE RELLENO. Reemplazar por fotos reales del local.",
+    "_receta": "scripts/bajar-fotos-pexels.py — recorte 9:16 centrado a 720x1280, WebP calidad 78",
+    "_uso": "En los 17 platos con video son galeria. En los 18 sin video, la -1 es la PORTADA y la -2 galeria. Excepcion: mar-y-tierra conserva de portada su foto real del cliente y estas dos van detras."
+  },
+  {
+    "archivo": "angus-1.webp",
+    "plato": "angus",
+    "pexels_id": 31587899,
+    "url": "https://www.pexels.com/photo/31587899/"
+  },
+  {
+    "archivo": "angus-2.webp",
+    "plato": "angus",
+    "pexels_id": 10065182,
+    "url": "https://www.pexels.com/photo/10065182/",
+    "_reemplazada": "La primera se veia quemada"
+  },
+  {
+    "archivo": "cheeseburger-1.webp",
+    "plato": "cheeseburger",
+    "pexels_id": 31119086,
+    "url": "https://www.pexels.com/photo/31119086/"
+  },
+  {
+    "archivo": "cheeseburger-2.webp",
+    "plato": "cheeseburger",
+    "pexels_id": 5836842,
+    "url": "https://www.pexels.com/photo/5836842/"
+  },
+  {
+    "archivo": "costilla-burger-1.webp",
+    "plato": "costilla-burger",
+    "pexels_id": 18804936,
+    "url": "https://www.pexels.com/photo/18804936/",
+    "_reemplazada": "La primera tenia una lata de Coca-Cola legible"
+  },
+  {
+    "archivo": "costilla-burger-2.webp",
+    "plato": "costilla-burger",
+    "pexels_id": 17312397,
+    "url": "https://www.pexels.com/photo/17312397/"
+  },
+  {
+    "archivo": "tradicional-1.webp",
+    "plato": "tradicional",
+    "pexels_id": 1938272,
+    "url": "https://www.pexels.com/photo/1938272/"
+  },
+  {
+    "archivo": "tradicional-2.webp",
+    "plato": "tradicional",
+    "pexels_id": 15818983,
+    "url": "https://www.pexels.com/photo/15818983/"
+  },
+  {
+    "archivo": "doble-torta-1.webp",
+    "plato": "doble-torta",
+    "pexels_id": 15476368,
+    "url": "https://www.pexels.com/photo/15476368/"
+  },
+  {
+    "archivo": "doble-torta-2.webp",
+    "plato": "doble-torta",
+    "pexels_id": 33502810,
+    "url": "https://www.pexels.com/photo/33502810/"
+  },
+  {
+    "archivo": "de-pollo-1.webp",
+    "plato": "de-pollo",
+    "pexels_id": 19119497,
+    "url": "https://www.pexels.com/photo/19119497/"
+  },
+  {
+    "archivo": "de-pollo-2.webp",
+    "plato": "de-pollo",
+    "pexels_id": 18632201,
+    "url": "https://www.pexels.com/photo/18632201/"
+  },
+  {
+    "archivo": "papas-especiales-1.webp",
+    "plato": "papas-especiales",
+    "pexels_id": 38441696,
+    "url": "https://www.pexels.com/photo/38441696/"
+  },
+  {
+    "archivo": "papas-especiales-2.webp",
+    "plato": "papas-especiales",
+    "pexels_id": 5836772,
+    "url": "https://www.pexels.com/photo/5836772/"
+  },
+  {
+    "archivo": "papas-mixtas-1.webp",
+    "plato": "papas-mixtas",
+    "pexels_id": 39042547,
+    "url": "https://www.pexels.com/photo/39042547/"
+  },
+  {
+    "archivo": "papas-mixtas-2.webp",
+    "plato": "papas-mixtas",
+    "pexels_id": 15754939,
+    "url": "https://www.pexels.com/photo/15754939/"
+  },
+  {
+    "archivo": "salchipapas-1.webp",
+    "plato": "salchipapas",
+    "pexels_id": 8879369,
+    "url": "https://www.pexels.com/photo/8879369/"
+  },
+  {
+    "archivo": "salchipapas-2.webp",
+    "plato": "salchipapas",
+    "pexels_id": 38504214,
+    "url": "https://www.pexels.com/photo/38504214/"
+  },
+  {
+    "archivo": "alitas-1.webp",
+    "plato": "alitas",
+    "pexels_id": 36782573,
+    "url": "https://www.pexels.com/photo/36782573/",
+    "_reemplazada": "La primera tenia el nombre de OTRO restaurante impreso en el papel"
+  },
+  {
+    "archivo": "alitas-2.webp",
+    "plato": "alitas",
+    "pexels_id": 29692606,
+    "url": "https://www.pexels.com/photo/29692606/"
+  },
+  {
+    "archivo": "nachos-1.webp",
+    "plato": "nachos",
+    "pexels_id": 35628195,
+    "url": "https://www.pexels.com/photo/35628195/"
+  },
+  {
+    "archivo": "nachos-2.webp",
+    "plato": "nachos",
+    "pexels_id": 36447656,
+    "url": "https://www.pexels.com/photo/36447656/"
+  },
+  {
+    "archivo": "taco-birria-1.webp",
+    "plato": "taco-birria",
+    "pexels_id": 33614200,
+    "url": "https://www.pexels.com/photo/33614200/"
+  },
+  {
+    "archivo": "taco-birria-2.webp",
+    "plato": "taco-birria",
+    "pexels_id": 38932103,
+    "url": "https://www.pexels.com/photo/38932103/"
+  },
+  {
+    "archivo": "taco-tico-1.webp",
+    "plato": "taco-tico",
+    "pexels_id": 28558349,
+    "url": "https://www.pexels.com/photo/28558349/",
+    "_reemplazada": "La primera era casi identica a taco-birria-1"
+  },
+  {
+    "archivo": "taco-tico-2.webp",
+    "plato": "taco-tico",
+    "pexels_id": 31061262,
+    "url": "https://www.pexels.com/photo/31061262/"
+  },
+  {
+    "archivo": "costilla-cerdo-1.webp",
+    "plato": "costilla-cerdo",
+    "pexels_id": 36669802,
+    "url": "https://www.pexels.com/photo/36669802/"
+  },
+  {
+    "archivo": "costilla-cerdo-2.webp",
+    "plato": "costilla-cerdo",
+    "pexels_id": 37135701,
+    "url": "https://www.pexels.com/photo/37135701/"
+  },
+  {
+    "archivo": "surtida-grande-1.webp",
+    "plato": "surtida-grande",
+    "pexels_id": 37099449,
+    "url": "https://www.pexels.com/photo/37099449/"
+  },
+  {
+    "archivo": "surtida-grande-2.webp",
+    "plato": "surtida-grande",
+    "pexels_id": 36931026,
+    "url": "https://www.pexels.com/photo/36931026/"
+  },
+  {
+    "archivo": "surtida-pequena-1.webp",
+    "plato": "surtida-pequena",
+    "pexels_id": 33691814,
+    "url": "https://www.pexels.com/photo/33691814/"
+  },
+  {
+    "archivo": "surtida-pequena-2.webp",
+    "plato": "surtida-pequena",
+    "pexels_id": 38545816,
+    "url": "https://www.pexels.com/photo/38545816/"
+  },
+  {
+    "archivo": "pinchos-1.webp",
+    "plato": "pinchos",
+    "pexels_id": 28902897,
+    "url": "https://www.pexels.com/photo/28902897/"
+  },
+  {
+    "archivo": "pinchos-2.webp",
+    "plato": "pinchos",
+    "pexels_id": 38138067,
+    "url": "https://www.pexels.com/photo/38138067/"
+  },
+  {
+    "archivo": "mar-y-tierra-1.webp",
+    "plato": "mar-y-tierra",
+    "pexels_id": 38366544,
+    "url": "https://www.pexels.com/photo/38366544/"
+  },
+  {
+    "archivo": "mar-y-tierra-2.webp",
+    "plato": "mar-y-tierra",
+    "pexels_id": 27988484,
+    "url": "https://www.pexels.com/photo/27988484/"
+  },
+  {
+    "archivo": "pulled-pork-1.webp",
+    "plato": "pulled-pork",
+    "pexels_id": 33706251,
+    "url": "https://www.pexels.com/photo/33706251/"
+  },
+  {
+    "archivo": "pulled-pork-2.webp",
+    "plato": "pulled-pork",
+    "pexels_id": 27668711,
+    "url": "https://www.pexels.com/photo/27668711/"
+  },
+  {
+    "archivo": "economica-1.webp",
+    "plato": "economica",
+    "pexels_id": 31992843,
+    "url": "https://www.pexels.com/photo/31992843/"
+  },
+  {
+    "archivo": "economica-2.webp",
+    "plato": "economica",
+    "pexels_id": 4571510,
+    "url": "https://www.pexels.com/photo/4571510/"
+  },
+  {
+    "archivo": "nachos-mixtos-1.webp",
+    "plato": "nachos-mixtos",
+    "pexels_id": 31088732,
+    "url": "https://www.pexels.com/photo/31088732/"
+  },
+  {
+    "archivo": "nachos-mixtos-2.webp",
+    "plato": "nachos-mixtos",
+    "pexels_id": 6605308,
+    "url": "https://www.pexels.com/photo/6605308/"
+  },
+  {
+    "archivo": "nuggets-1.webp",
+    "plato": "nuggets",
+    "pexels_id": 7428286,
+    "url": "https://www.pexels.com/photo/7428286/"
+  },
+  {
+    "archivo": "nuggets-2.webp",
+    "plato": "nuggets",
+    "pexels_id": 33101858,
+    "url": "https://www.pexels.com/photo/33101858/"
+  },
+  {
+    "archivo": "canasta-chicharron-1.webp",
+    "plato": "canasta-chicharron",
+    "pexels_id": 37287413,
+    "url": "https://www.pexels.com/photo/37287413/"
+  },
+  {
+    "archivo": "canasta-chicharron-2.webp",
+    "plato": "canasta-chicharron",
+    "pexels_id": 37121088,
+    "url": "https://www.pexels.com/photo/37121088/"
+  },
+  {
+    "archivo": "cartucho-1.webp",
+    "plato": "cartucho",
+    "pexels_id": 17429243,
+    "url": "https://www.pexels.com/photo/17429243/"
+  },
+  {
+    "archivo": "cartucho-2.webp",
+    "plato": "cartucho",
+    "pexels_id": 30500757,
+    "url": "https://www.pexels.com/photo/30500757/"
+  },
+  {
+    "archivo": "empanada-arreglada-1.webp",
+    "plato": "empanada-arreglada",
+    "pexels_id": 37025257,
+    "url": "https://www.pexels.com/photo/37025257/"
+  },
+  {
+    "archivo": "empanada-arreglada-2.webp",
+    "plato": "empanada-arreglada",
+    "pexels_id": 37025265,
+    "url": "https://www.pexels.com/photo/37025265/"
+  },
+  {
+    "archivo": "choripan-1.webp",
+    "plato": "choripan",
+    "pexels_id": 37135651,
+    "url": "https://www.pexels.com/photo/37135651/"
+  },
+  {
+    "archivo": "choripan-2.webp",
+    "plato": "choripan",
+    "pexels_id": 37135609,
+    "url": "https://www.pexels.com/photo/37135609/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "empanada-1.webp",
+    "plato": "empanada",
+    "pexels_id": 30771118,
+    "url": "https://www.pexels.com/photo/30771118/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "empanada-2.webp",
+    "plato": "empanada",
+    "pexels_id": 37135678,
+    "url": "https://www.pexels.com/photo/37135678/"
+  },
+  {
+    "archivo": "mini-papas-mixtas-1.webp",
+    "plato": "mini-papas-mixtas",
+    "pexels_id": 5779487,
+    "url": "https://www.pexels.com/photo/5779487/"
+  },
+  {
+    "archivo": "mini-papas-mixtas-2.webp",
+    "plato": "mini-papas-mixtas",
+    "pexels_id": 35633638,
+    "url": "https://www.pexels.com/photo/35633638/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "mini-nachos-mixtos-1.webp",
+    "plato": "mini-nachos-mixtos",
+    "pexels_id": 15801068,
+    "url": "https://www.pexels.com/photo/15801068/"
+  },
+  {
+    "archivo": "mini-nachos-mixtos-2.webp",
+    "plato": "mini-nachos-mixtos",
+    "pexels_id": 5211212,
+    "url": "https://www.pexels.com/photo/5211212/"
+  },
+  {
+    "archivo": "mini-salchipapas-1.webp",
+    "plato": "mini-salchipapas",
+    "pexels_id": 27643034,
+    "url": "https://www.pexels.com/photo/27643034/"
+  },
+  {
+    "archivo": "mini-salchipapas-2.webp",
+    "plato": "mini-salchipapas",
+    "pexels_id": 39034202,
+    "url": "https://www.pexels.com/photo/39034202/"
+  },
+  {
+    "archivo": "mini-nuggets-1.webp",
+    "plato": "mini-nuggets",
+    "pexels_id": 36863577,
+    "url": "https://www.pexels.com/photo/36863577/"
+  },
+  {
+    "archivo": "mini-nuggets-2.webp",
+    "plato": "mini-nuggets",
+    "pexels_id": 35315965,
+    "url": "https://www.pexels.com/photo/35315965/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "mini-papas-especiales-1.webp",
+    "plato": "mini-papas-especiales",
+    "pexels_id": 29653205,
+    "url": "https://www.pexels.com/photo/29653205/"
+  },
+  {
+    "archivo": "mini-papas-especiales-2.webp",
+    "plato": "mini-papas-especiales",
+    "pexels_id": 1586942,
+    "url": "https://www.pexels.com/photo/1586942/"
+  },
+  {
+    "archivo": "mini-nachos-1.webp",
+    "plato": "mini-nachos",
+    "pexels_id": 17683811,
+    "url": "https://www.pexels.com/photo/17683811/"
+  },
+  {
+    "archivo": "mini-nachos-2.webp",
+    "plato": "mini-nachos",
+    "pexels_id": 6399998,
+    "url": "https://www.pexels.com/photo/6399998/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "papas-gajos-1.webp",
+    "plato": "papas-gajos",
+    "pexels_id": 30641037,
+    "url": "https://www.pexels.com/photo/30641037/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "papas-gajos-2.webp",
+    "plato": "papas-gajos",
+    "pexels_id": 38081858,
+    "url": "https://www.pexels.com/photo/38081858/",
+    "_reemplazada": "La primera tenia marca ajena visible o no representaba el plato"
+  },
+  {
+    "archivo": "papas-pequenas-1.webp",
+    "plato": "papas-pequenas",
+    "pexels_id": 5407377,
+    "url": "https://www.pexels.com/photo/5407377/"
+  },
+  {
+    "archivo": "papas-pequenas-2.webp",
+    "plato": "papas-pequenas",
+    "pexels_id": 4109281,
+    "url": "https://www.pexels.com/photo/4109281/"
+  },
+  {
+    "archivo": "alitas-3.webp",
+    "plato": "alitas",
+    "pexels_id": 32722824,
+    "url": "https://www.pexels.com/photo/32722824/"
+  },
+  {
+    "archivo": "angus-3.webp",
+    "plato": "angus",
+    "pexels_id": 34407517,
+    "url": "https://www.pexels.com/photo/34407517/"
+  },
+  {
+    "archivo": "canasta-chicharron-3.webp",
+    "plato": "canasta-chicharron",
+    "pexels_id": 34147124,
+    "url": "https://www.pexels.com/photo/34147124/"
+  },
+  {
+    "archivo": "canasta-chicharron-4.webp",
+    "plato": "canasta-chicharron",
+    "pexels_id": 37135647,
+    "url": "https://www.pexels.com/photo/37135647/"
+  },
+  {
+    "archivo": "cartucho-3.webp",
+    "plato": "cartucho",
+    "pexels_id": 28525208,
+    "url": "https://www.pexels.com/photo/28525208/"
+  },
+  {
+    "archivo": "cartucho-4.webp",
+    "plato": "cartucho",
+    "pexels_id": 37121076,
+    "url": "https://www.pexels.com/photo/37121076/"
+  },
+  {
+    "archivo": "choripan-3.webp",
+    "plato": "choripan",
+    "pexels_id": 37058018,
+    "url": "https://www.pexels.com/photo/37058018/"
+  },
+  {
+    "archivo": "choripan-4.webp",
+    "plato": "choripan",
+    "pexels_id": 37135610,
+    "url": "https://www.pexels.com/photo/37135610/"
+  },
+  {
+    "archivo": "costilla-burger-3.webp",
+    "plato": "costilla-burger",
+    "pexels_id": 15953046,
+    "url": "https://www.pexels.com/photo/15953046/"
+  },
+  {
+    "archivo": "costilla-cerdo-3.webp",
+    "plato": "costilla-cerdo",
+    "pexels_id": 34495393,
+    "url": "https://www.pexels.com/photo/34495393/"
+  },
+  {
+    "archivo": "de-pollo-3.webp",
+    "plato": "de-pollo",
+    "pexels_id": 19055681,
+    "url": "https://www.pexels.com/photo/19055681/"
+  },
+  {
+    "archivo": "doble-torta-3.webp",
+    "plato": "doble-torta",
+    "pexels_id": 29626128,
+    "url": "https://www.pexels.com/photo/29626128/"
+  },
+  {
+    "archivo": "economica-3.webp",
+    "plato": "economica",
+    "pexels_id": 15010289,
+    "url": "https://www.pexels.com/photo/15010289/"
+  },
+  {
+    "archivo": "economica-4.webp",
+    "plato": "economica",
+    "pexels_id": 4628327,
+    "url": "https://www.pexels.com/photo/4628327/"
+  },
+  {
+    "archivo": "empanada-3.webp",
+    "plato": "empanada",
+    "pexels_id": 37342574,
+    "url": "https://www.pexels.com/photo/37342574/"
+  },
+  {
+    "archivo": "empanada-4.webp",
+    "plato": "empanada",
+    "pexels_id": 37135685,
+    "url": "https://www.pexels.com/photo/37135685/"
+  },
+  {
+    "archivo": "empanada-arreglada-3.webp",
+    "plato": "empanada-arreglada",
+    "pexels_id": 37025266,
+    "url": "https://www.pexels.com/photo/37025266/"
+  },
+  {
+    "archivo": "empanada-arreglada-4.webp",
+    "plato": "empanada-arreglada",
+    "pexels_id": 37025258,
+    "url": "https://www.pexels.com/photo/37025258/"
+  },
+  {
+    "archivo": "mar-y-tierra-4.webp",
+    "plato": "mar-y-tierra",
+    "pexels_id": 30500752,
+    "url": "https://www.pexels.com/photo/30500752/"
+  },
+  {
+    "archivo": "mar-y-tierra-5.webp",
+    "plato": "mar-y-tierra",
+    "pexels_id": 12325120,
+    "url": "https://www.pexels.com/photo/12325120/"
+  },
+  {
+    "archivo": "mini-nachos-3.webp",
+    "plato": "mini-nachos",
+    "pexels_id": 4109200,
+    "url": "https://www.pexels.com/photo/4109200/"
+  },
+  {
+    "archivo": "mini-nachos-4.webp",
+    "plato": "mini-nachos",
+    "pexels_id": 5836768,
+    "url": "https://www.pexels.com/photo/5836768/"
+  },
+  {
+    "archivo": "mini-nachos-mixtos-3.webp",
+    "plato": "mini-nachos-mixtos",
+    "pexels_id": 17683812,
+    "url": "https://www.pexels.com/photo/17683812/"
+  },
+  {
+    "archivo": "mini-nachos-mixtos-4.webp",
+    "plato": "mini-nachos-mixtos",
+    "pexels_id": 5848734,
+    "url": "https://www.pexels.com/photo/5848734/"
+  },
+  {
+    "archivo": "mini-nuggets-3.webp",
+    "plato": "mini-nuggets",
+    "pexels_id": 12178045,
+    "url": "https://www.pexels.com/photo/12178045/"
+  },
+  {
+    "archivo": "mini-nuggets-4.webp",
+    "plato": "mini-nuggets",
+    "pexels_id": 36863581,
+    "url": "https://www.pexels.com/photo/36863581/"
+  },
+  {
+    "archivo": "mini-papas-especiales-3.webp",
+    "plato": "mini-papas-especiales",
+    "pexels_id": 33014396,
+    "url": "https://www.pexels.com/photo/33014396/"
+  },
+  {
+    "archivo": "mini-papas-especiales-4.webp",
+    "plato": "mini-papas-especiales",
+    "pexels_id": 6941036,
+    "url": "https://www.pexels.com/photo/6941036/"
+  },
+  {
+    "archivo": "mini-papas-mixtas-3.webp",
+    "plato": "mini-papas-mixtas",
+    "pexels_id": 17354196,
+    "url": "https://www.pexels.com/photo/17354196/"
+  },
+  {
+    "archivo": "mini-papas-mixtas-4.webp",
+    "plato": "mini-papas-mixtas",
+    "pexels_id": 18866155,
+    "url": "https://www.pexels.com/photo/18866155/"
+  },
+  {
+    "archivo": "mini-salchipapas-3.webp",
+    "plato": "mini-salchipapas",
+    "pexels_id": 28736363,
+    "url": "https://www.pexels.com/photo/28736363/"
+  },
+  {
+    "archivo": "mini-salchipapas-4.webp",
+    "plato": "mini-salchipapas",
+    "pexels_id": 28736361,
+    "url": "https://www.pexels.com/photo/28736361/",
+    "_reemplazada": "La primera no tenia salchicha"
+  },
+  {
+    "archivo": "nachos-3.webp",
+    "plato": "nachos",
+    "pexels_id": 14571655,
+    "url": "https://www.pexels.com/photo/14571655/"
+  },
+  {
+    "archivo": "nachos-mixtos-3.webp",
+    "plato": "nachos-mixtos",
+    "pexels_id": 13082260,
+    "url": "https://www.pexels.com/photo/13082260/"
+  },
+  {
+    "archivo": "nachos-mixtos-4.webp",
+    "plato": "nachos-mixtos",
+    "pexels_id": 6004783,
+    "url": "https://www.pexels.com/photo/6004783/"
+  },
+  {
+    "archivo": "nuggets-3.webp",
+    "plato": "nuggets",
+    "pexels_id": 33254639,
+    "url": "https://www.pexels.com/photo/33254639/"
+  },
+  {
+    "archivo": "nuggets-4.webp",
+    "plato": "nuggets",
+    "pexels_id": 37484986,
+    "url": "https://www.pexels.com/photo/37484986/"
+  },
+  {
+    "archivo": "papas-especiales-3.webp",
+    "plato": "papas-especiales",
+    "pexels_id": 31701973,
+    "url": "https://www.pexels.com/photo/31701973/"
+  },
+  {
+    "archivo": "papas-gajos-3.webp",
+    "plato": "papas-gajos",
+    "pexels_id": 7936642,
+    "url": "https://www.pexels.com/photo/7936642/"
+  },
+  {
+    "archivo": "papas-gajos-4.webp",
+    "plato": "papas-gajos",
+    "pexels_id": 33691838,
+    "url": "https://www.pexels.com/photo/33691838/"
+  },
+  {
+    "archivo": "papas-mixtas-3.webp",
+    "plato": "papas-mixtas",
+    "pexels_id": 24513374,
+    "url": "https://www.pexels.com/photo/24513374/"
+  },
+  {
+    "archivo": "papas-pequenas-3.webp",
+    "plato": "papas-pequenas",
+    "pexels_id": 8424403,
+    "url": "https://www.pexels.com/photo/8424403/"
+  },
+  {
+    "archivo": "papas-pequenas-4.webp",
+    "plato": "papas-pequenas",
+    "pexels_id": 17366875,
+    "url": "https://www.pexels.com/photo/17366875/"
+  },
+  {
+    "archivo": "pinchos-3.webp",
+    "plato": "pinchos",
+    "pexels_id": 30215494,
+    "url": "https://www.pexels.com/photo/30215494/",
+    "_reemplazada": "La primera era un asador industrial, no dos pinchos"
+  },
+  {
+    "archivo": "pulled-pork-3.webp",
+    "plato": "pulled-pork",
+    "pexels_id": 15953044,
+    "url": "https://www.pexels.com/photo/15953044/"
+  },
+  {
+    "archivo": "pulled-pork-4.webp",
+    "plato": "pulled-pork",
+    "pexels_id": 10322490,
+    "url": "https://www.pexels.com/photo/10322490/"
+  },
+  {
+    "archivo": "salchipapas-3.webp",
+    "plato": "salchipapas",
+    "pexels_id": 37256020,
+    "url": "https://www.pexels.com/photo/37256020/",
+    "_reemplazada": "Se cambio dos veces: la primera no tenia salchicha y la segunda parecia chicharron"
+  },
+  {
+    "archivo": "surtida-grande-3.webp",
+    "plato": "surtida-grande",
+    "pexels_id": 37135660,
+    "url": "https://www.pexels.com/photo/37135660/"
+  },
+  {
+    "archivo": "surtida-pequena-3.webp",
+    "plato": "surtida-pequena",
+    "pexels_id": 36734933,
+    "url": "https://www.pexels.com/photo/36734933/"
+  },
+  {
+    "archivo": "taco-birria-3.webp",
+    "plato": "taco-birria",
+    "pexels_id": 33614198,
+    "url": "https://www.pexels.com/photo/33614198/",
+    "_reemplazada": "La primera era una foto de nachos, no de tacos"
+  },
+  {
+    "archivo": "taco-tico-3.webp",
+    "plato": "taco-tico",
+    "pexels_id": 18574186,
+    "url": "https://www.pexels.com/photo/18574186/"
+  },
+  {
+    "archivo": "tradicional-3.webp",
+    "plato": "tradicional",
+    "pexels_id": 4253700,
+    "url": "https://www.pexels.com/photo/4253700/"
+  }
+]

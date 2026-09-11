@@ -1,0 +1,434 @@
+@import "tailwindcss";
+
+/*
+  Paleta Brasa & Humo — reparto 70/30/10.
+  La marca es la llama sobre negro: el 70% es negro real, el 30% superficies
+  apenas cálidas y el 10% el naranja de la brasa.
+
+  REGLAS DE CONTRASTE (medidas, no estimadas):
+    acento      sobre base      = 4.88:1  -> texto normal permitido
+    acento      sobre base-alt  = 4.33:1  -> SOLO texto grande; usar acento-alt (5.62:1)
+    acento-alt  sobre base      = 6.33:1  -> seguro en todo tamano
+    texto       sobre base      = 18.50:1 -> texto de cuerpo
+    superficie-alt como texto   = 2.49:1  -> NUNCA como texto, solo superficie
+
+  OJO CON LOS DEGRADADOS: el hero pasa por #963316 y #5B260D. Sobre esos,
+  acento-alt cae a 2.55:1 y 4.10:1 — ilegible. Sobre cualquier superficie del
+  30% o cualquier degradado, el texto va BLANCO (7.44:1 y 11.98:1). El naranja
+  como texto solo sobre el fondo base plano.
+*/
+
+@theme {
+  /* ---- 70% dominante: NEGRO. Nada de cafe. ---- */
+  --color-base: #050505;
+  --color-base-alt: #17100e;
+
+  /* ---- 30% secundario: superficies casi negras, apenas calidas ---- */
+  --color-superficie: #1a0f0d;
+  --color-superficie-alt: #2a1512;
+  --color-borde: #33201c;
+
+  /* ---- rojo profundo de la llama del logo, acento secundario ---- */
+  --color-brasa: #a01010;
+
+  /* ---- 10% acento: CTAs, precios, badges, estado activo ---- */
+  --color-acento: #e35120;
+  --color-acento-alt: #e8771f;
+  --color-acento-claro: #f0a05d;
+
+  /* ---- texto ---- */
+  --color-texto: #fffdfc;
+  --color-texto-suave: #d9c9c2;
+
+  --font-display: var(--fuente-display), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--fuente-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-base);
+  /*
+    `clip` y NO `hidden`, en html Y en body.
+
+    Las animaciones de entrada desplazan elementos hasta 32px fuera del borde
+    izquierdo. Mientras estan afuera el documento gana ancho y aparece un scroll
+    horizontal: se median 402px de scrollWidth en un viewport de 390.
+    Tenerlo solo en `body` no alcanzaba, porque html se ensancha igual.
+
+    La diferencia con `hidden` importa: `hidden` convierte al elemento en
+    contenedor de scroll y eso ROMPE `position: sticky` en sus descendientes —
+    y la barra de filtros del menu es sticky. `clip` recorta sin crear
+    contenedor de scroll.
+  */
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-base);
+  color: var(--color-texto);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+/* Brasas del hero — CSS puro, sin JavaScript. Solo transform y opacity. */
+@keyframes brasa-subir {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(var(--deriva, 12px), -70svh, 0) scale(0.25);
+    opacity: 0;
+  }
+}
+
+/*
+  Luz de brasa: la intensidad sube y baja en un ciclo lento, como carbon
+  respirando. Solo transform y opacity, asi que corre en GPU.
+  El ciclo es largo y desfasado a proposito — si late rapido parece un error.
+*/
+@keyframes respiro-brasa {
+  0%,
+  100% {
+    transform: scale(1) translateZ(0);
+    opacity: 0.42;
+  }
+  50% {
+    transform: scale(1.09) translateZ(0);
+    opacity: 0.68;
+  }
+}
+
+/* El spec lo exige: prefers-reduced-motion detiene todo. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   NO BORRAR POR ARRASTRE: estas animaciones las usa
+   features/landing/components/LogoEnBrasas.tsx.
+   Ya se perdieron una vez al eliminar un bloque vecino.
+   ============================================================ */
+/* ============================================================
+   Fuego y calor. Todo con transform/opacity/filter — va en GPU.
+   Los pasos son IRREGULARES a proposito: una llama que late
+   simetrica se lee como maquina, no como fuego.
+   ============================================================ */
+
+/* Parpadeo de llama: brillo y escala nerviosos, sin ritmo obvio. */
+@keyframes llama-parpadeo {
+  0%   { opacity: .55; transform: scale(1)     translateZ(0); }
+  12%  { opacity: .82; transform: scale(1.035) translateZ(0); }
+  23%  { opacity: .61; transform: scale(1.01)  translateZ(0); }
+  38%  { opacity: .95; transform: scale(1.06)  translateZ(0); }
+  47%  { opacity: .70; transform: scale(1.02)  translateZ(0); }
+  61%  { opacity: .88; transform: scale(1.045) translateZ(0); }
+  73%  { opacity: .58; transform: scale(1.005) translateZ(0); }
+  86%  { opacity: .90; transform: scale(1.05)  translateZ(0); }
+  100% { opacity: .55; transform: scale(1)     translateZ(0); }
+}
+
+/* Onda de calor: el anillo crece hacia afuera y se apaga. */
+@keyframes onda-calor {
+  0%   { opacity: .55; transform: scale(.82) translateZ(0); }
+  70%  { opacity: .12; transform: scale(1.12) translateZ(0); }
+  100% { opacity: 0;   transform: scale(1.28) translateZ(0); }
+}
+
+/* Aire caliente: deformacion lenta, como el temblor sobre la parrilla. */
+@keyframes temblor-calor {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(-3px, -5px, 0) scale(1.015); }
+  66%      { transform: translate3d(3px, -2px, 0) scale(1.008); }
+}
+
+/* ---- Barra lateral de redes ---- */
+.barra-social {
+  animation: barra-social-entra 0.8s ease-out 1s both;
+}
+@keyframes barra-social-entra {
+  from {
+    opacity: 0;
+    transform: translateX(90px) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+.icono-social {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.icono-social:hover {
+  transform: scale(1.2) translateX(-5px);
+}
+.icono-social:active {
+  transform: scale(0.9);
+}
+
+/* ============================================================
+   Barra de desplazamiento con la marca.
+   Un detalle chico que separa un sitio hecho de uno generado.
+
+   Se declaran las DOS sintaxis: la estandar (`scrollbar-color`,
+   que entiende Firefox) y la de WebKit (Chrome, Edge, Safari).
+   Ninguna cubre a las dos familias por si sola.
+
+   Los carriles horizontales del menu esconden su barra aparte,
+   con utilidades de Tailwind — esto no los afecta.
+   ============================================================ */
+
+/* Firefox */
+html {
+  scrollbar-color: var(--color-acento) var(--color-base-alt);
+  scrollbar-width: thin;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base-alt);
+  border-left: 1px solid var(--color-borde);
+}
+
+::-webkit-scrollbar-thumb {
+  /* Brasa: del rescoldo abajo al ambar arriba. */
+  background: linear-gradient(
+    180deg,
+    var(--color-acento-claro) 0%,
+    var(--color-acento) 45%,
+    var(--color-brasa) 100%
+  );
+  border-radius: 9999px;
+  /* El borde del color del riel deja el pulgar flotando, no pegado. */
+  border: 2px solid var(--color-base-alt);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #ffd9a0 0%,
+    var(--color-acento-alt) 50%,
+    var(--color-acento) 100%
+  );
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-acento-alt);
+  background-clip: padding-box;
+}
+
+/* La esquina donde se cruzan las dos barras no debe quedar blanca. */
+::-webkit-scrollbar-corner {
+  background: var(--color-base-alt);
+}
+
+/* Los drawers llevan una barra mas discreta: no compiten con el contenido. */
+[role="dialog"] ::-webkit-scrollbar {
+  width: 7px;
+}
+[role="dialog"] ::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0;
+}
+[role="dialog"] ::-webkit-scrollbar-thumb {
+  border-width: 1px;
+  border-color: transparent;
+}
+
+/* ============================================================
+   Precio con contorno.
+   Sobre una foto de comida el naranja puede caer justo encima
+   de una zona clara y perderse. El contorno negro lo despega
+   del fondo sea cual sea la foto.
+
+   Se usa `paint-order: stroke fill` para que el trazo quede
+   POR DEBAJO del relleno: sin eso el contorno se come el
+   interior de las letras y el numero se ve mas delgado.
+   ============================================================ */
+.precio-contorneado {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 3px #050505;
+  /* Sombra suave ademas del trazo: separa aun sobre fondos claros. */
+  text-shadow: 0 2px 6px rgb(5 5 5 / 0.75);
+}
+
+/* En tamanos chicos un trazo de 3px se traga la letra. */
+.precio-contorneado-sm {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2px #050505;
+  text-shadow: 0 1px 4px rgb(5 5 5 / 0.7);
+}
+
+/*
+  EL MEDIO DE UN REEL, en sus dos maquetas.
+
+  En movil ocupa la pantalla completa y el riel de acciones flota encima, que
+  es como se ve un Short o un TikTok. Antes el riel iba AL LADO: le robaba 72px
+  de ancho, la tarjeta bajaba a 294x523 en una pantalla de 844 y quedaban 165px
+  de negro muerto arriba.
+
+  Desde `lg` vuelve a ser tarjeta 9:16 con el riel a la par, que ahi si hay
+  espacio de sobra a los costados y pegar los botones sobre la foto no aporta.
+
+  Va en CSS y no en un `style` en linea porque un estilo en linea no distingue
+  puntos de quiebre: el `min()` de escritorio se aplicaba tambien en movil.
+*/
+.reel-medio {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .reel-medio {
+    /*
+      `min()` decide quien manda: el alto disponible o el ancho de la pantalla.
+      Se resta el riel de acciones para que nunca lo empuje fuera.
+
+      7rem y no 3rem: la seccion pasa a `lg:pt-20` para que la tarjeta no nazca
+      debajo del navbar fijo. Si este numero no acompana al relleno, la tarjeta
+      se calcula mas alta que el hueco disponible y se desborda.
+    */
+    width: min(100% - 4.5rem, calc((100dvh - 7rem) * 9 / 16));
+    height: auto;
+    max-height: 100%;
+    aspect-ratio: 9 / 16;
+  }
+}
+
+/* ============================================================
+   Revelado al entrar en pantalla.
+
+   Reemplaza a Framer Motion. El costo de aquella version no era
+   la animacion sino el "use client" de Revelar: arrastraba la
+   landing entera —que es de servidor— al arbol de hidratacion.
+   Lighthouse lo media como 4.401 ms de render delay en el LCP.
+
+   Reparto de trabajo:
+     - CSS  : el estado inicial, la transicion y el escalonado.
+     - JS   : una sola linea de verdad, `data-visible`, que pone
+              ObservadorRevelado con un IntersectionObserver.
+
+   Solo se animan opacity y transform: ambos van en GPU y no
+   provocan reflow.
+   ============================================================ */
+
+.revelar {
+  --revelar-x: 0px;
+  --revelar-y: 0px;
+  --revelar-escala: 1;
+  --revelar-retraso: 0s;
+}
+
+.revelar-abajo {
+  --revelar-y: 28px;
+}
+.revelar-izquierda {
+  --revelar-x: -32px;
+}
+.revelar-derecha {
+  --revelar-x: 32px;
+}
+.revelar-escala {
+  --revelar-escala: 0.94;
+}
+
+/*
+  `scripting: enabled` es la clave de que esto sea seguro.
+
+  El estado oculto SOLO existe si hay JavaScript para revelarlo. Sin
+  JavaScript —o en un navegador que ni entienda esta consulta— el bloque
+  entero se descarta y el contenido queda visible y quieto. Nunca se puede
+  dar el caso de una pagina en blanco esperando un observador que no va
+  a llegar.
+*/
+@media (scripting: enabled) {
+  .revelar {
+    opacity: 0;
+    transform: translate3d(var(--revelar-x), var(--revelar-y), 0)
+      scale(var(--revelar-escala));
+    /* Misma curva que tenia Framer: salida rapida, llegada suave. */
+    transition:
+      opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--revelar-retraso),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--revelar-retraso);
+  }
+
+  .revelar[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Los hijos de una cascada esperan a que el padre entre en pantalla. */
+  .revelar-item {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--revelar-retraso),
+      transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--revelar-retraso);
+  }
+
+  .revelar-cascada[data-visible="true"] > .revelar-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+  SOBRE EL PLIEGUE no se usa el observador.
+
+  El observador corre dentro de un `useEffect`, o sea despues de hidratar.
+  Si el hero dependiera de el, su texto quedaria en opacidad 0 hasta que
+  llegue el JavaScript: exactamente el render delay que vinimos a eliminar.
+  Una `@keyframes` arranca en el primer pintado, sin JavaScript de por medio.
+*/
+@keyframes revelar-entrada {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--revelar-x), var(--revelar-y), 0)
+      scale(var(--revelar-escala));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.revelar-inmediato {
+  animation: revelar-entrada 0.6s cubic-bezier(0.22, 1, 0.36, 1)
+    var(--revelar-retraso) both;
+}
+
+/*
+  Con movimiento reducido el contenido aparece YA COLOCADO. No basta con
+  acortar la duracion —eso lo hace el bloque general de arriba—: hay que
+  no moverlo y, sobre todo, no dejarlo oculto esperando al observador.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .revelar,
+  .revelar-item,
+  .revelar-inmediato {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "_nota": "Videos de stock de Pexels. Licencia Pexels: uso comercial permitido, atribucion NO obligatoria. Prohibe revender copias sin alterar y sugerir respaldo de marcas o personas. Verificada el 2026-09-09 en https://www.pexels.com/license/",
+    "_pendiente": "SON DE RELLENO. Reemplazar por video real del local en cuanto el cliente grabe.",
+    "_receta": "scripts/optimizar-video-reel.py — 6 s, 720x1280, sin audio, tope de 900 KB"
+  },
+  {
+    "archivo": "burger-fuego.mp4",
+    "plato": "angus",
+    "titulo": "Juicy gourmet burger with flaming background",
+    "url": "https://www.pexels.com/video/juicy-gourmet-burger-with-flaming-background-35636124/"
+  },
+  {
+    "archivo": "soplete.mp4",
+    "plato": "cheeseburger",
+    "titulo": "A person is using a torch to cook a burger",
+    "url": "https://www.pexels.com/video/a-person-is-using-a-torch-to-cook-a-burger-4253715/"
+  },
+  {
+    "archivo": "burger-girando.mp4",
+    "plato": "costilla-burger",
+    "titulo": "Rotating shot of cheeseburger",
+    "url": "https://www.pexels.com/video/8879540/",
+    "_reemplazado": "El clip anterior era casi todo plancha gris: la comida ocupaba una franja al pie y en 9:16 la pantalla se llenaba de metal"
+  },
+  {
+    "archivo": "burger-armado.mp4",
+    "plato": "tradicional",
+    "titulo": "Close up of a burger being assembled",
+    "url": "https://www.pexels.com/video/close-up-of-a-burger-being-assembled-29616671/"
+  },
+  {
+    "archivo": "burger-cortada.mp4",
+    "plato": "doble-torta",
+    "titulo": "A burger with cheese and a knife being cut",
+    "url": "https://www.pexels.com/video/19121680/",
+    "_reemplazado": "El clip anterior era casi todo plancha gris: la comida ocupaba una franja al pie y en 9:16 la pantalla se llenaba de metal"
+  },
+  {
+    "archivo": "papas-salsa.mp4",
+    "plato": "papas-especiales",
+    "titulo": "Burger ingredients, fries and sauce",
+    "url": "https://www.pexels.com/video/burger-ingredients-fries-and-sauce-6017724/"
+  },
+  {
+    "archivo": "pollo-parrilla.mp4",
+    "plato": "de-pollo",
+    "titulo": "Grilled chicken cooking on barbecue grill",
+    "url": "https://www.pexels.com/video/grilled-chicken-cooking-on-barbecue-grill-28951978/"
+  },
+  {
+    "archivo": "parrilla-llamas.mp4",
+    "plato": "surtida-grande",
+    "titulo": "Sizzling grilled burger with flames",
+    "url": "https://www.pexels.com/video/sizzling-grilled-burger-with-flames-31176159/"
+  },
+  {
+    "archivo": "surtida-carnes.mp4",
+    "plato": "surtida-pequena",
+    "titulo": "Delicious grilled meats with fries on table",
+    "url": "https://www.pexels.com/video/delicious-grilled-meats-with-fries-on-table-37069458/"
+  },
+  {
+    "archivo": "costillas-flameadas.mp4",
+    "plato": "costilla-cerdo",
+    "titulo": "Flaming BBQ ribs torched to perfection",
+    "url": "https://www.pexels.com/video/flaming-bbq-ribs-torched-to-perfection-35517091/"
+  },
+  {
+    "archivo": "alitas.mp4",
+    "plato": "alitas",
+    "titulo": "Crispy chicken wings with dipping sauce",
+    "url": "https://www.pexels.com/video/crispy-chicken-wings-with-dipping-sauce-36695819/"
+  },
+  {
+    "archivo": "pinchos-brochetas.mp4",
+    "plato": "pinchos",
+    "titulo": "Delicious grilled kebabs and chicken on skewers",
+    "url": "https://www.pexels.com/video/delicious-grilled-kebabs-and-chicken-on-skewers-35038885/"
+  },
+  {
+    "archivo": "papas-friendo.mp4",
+    "plato": "papas-mixtas",
+    "titulo": "Golden french fries deep frying close up",
+    "url": "https://www.pexels.com/video/golden-french-fries-deep-frying-close-up-39195447/"
+  },
+  {
+    "archivo": "papas-fritas.mp4",
+    "plato": "salchipapas",
+    "titulo": "Slow motion close up of freshly fried fries",
+    "url": "https://www.pexels.com/video/slow-motion-close-up-of-freshly-fried-fries-38655911/"
+  },
+  {
+    "archivo": "tacos-preparando.mp4",
+    "plato": "taco-birria",
+    "titulo": "Close up of delicious tacos being prepared",
+    "url": "https://www.pexels.com/video/close-up-of-delicious-tacos-being-prepared-37346941/"
+  },
+  {
+    "archivo": "tacos-plato.mp4",
+    "plato": "taco-tico",
+    "titulo": "Delicious taco platter with salsa and guacamole",
+    "url": "https://www.pexels.com/video/delicious-taco-platter-with-salsa-and-guacamole-37346962/"
+  },
+  {
+    "archivo": "nachos-queso.mp4",
+    "plato": "nachos",
+    "titulo": "Delicious nachos with cheese and jalapenos",
+    "url": "https://www.pexels.com/video/delicious-nachos-with-cheese-and-jalapenos-36126541/"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "sobreNosotros": {
+    "antetitulo": "Sobre nosotros",
+    "tituloLinea1": "Doce horas",
+    "tituloLinea2": "de paciencia",
+    "parrafo": "En Brasa & Humo nada sale rápido. El brisket y la costilla pasan la noche en el ahumador con leña de guayabo, el pan se hornea aquí cada mañana y las salsas se cocinan en casa. Lo que llega a la mesa es lo que se ve en la foto.",
+    "puntos": [
+      "Ahumador de leña, no de gas",
+      "Pan y salsas hechos en casa",
+      "Cortes frescos, nunca congelados",
+      "Porciones honestas"
+    ]
+  },
+  "porQue": {
+    "antetitulo": "Por qué nosotros",
+    "titulo": "¿Por qué Brasa & Humo?",
+    "razones": [
+      {
+        "titulo": "Leña de verdad",
+        "texto": "Guayabo y madera de café. El humo se siente en la carne, no en una salsa que lo imita."
+      },
+      {
+        "titulo": "Doce horas de ahumador",
+        "texto": "El brisket entra la noche anterior. Por eso cerramos lunes: es el día de preparar la semana."
+      },
+      {
+        "titulo": "Cortado al momento",
+        "texto": "Nada se corta antes de que lo pidan. La carne se seca en cuanto se abre."
+      },
+      {
+        "titulo": "Directo a su puerta",
+        "texto": "Pida por WhatsApp y se lo llevamos en San José, o pase recogiendo cuando esté listo."
+      }
+    ]
+  }
+}

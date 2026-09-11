@@ -1,0 +1,44 @@
+[
+  {
+    "autor": "Cliente de muestra 1",
+    "credencial": "Local Guide · 42 reseñas",
+    "estrellas": 5,
+    "texto": "El brisket se deshace solo. Se nota que pasó la noche en el ahumador y no media hora en una plancha.",
+    "fecha": "Hace 2 meses"
+  },
+  {
+    "autor": "Cliente de muestra 2",
+    "credencial": "18 reseñas",
+    "estrellas": 5,
+    "texto": "Pedimos la tabla para cuatro y sobró. Buena relación precio calidad y el chorizo estaba muy bueno.",
+    "fecha": "Hace 3 meses"
+  },
+  {
+    "autor": "Cliente de muestra 3",
+    "credencial": "Local Guide · 77 reseñas",
+    "estrellas": 5,
+    "texto": "La Brasa & Humo es la mejor hamburguesa que he comido en San José. El pan aguanta hasta el último mordisco.",
+    "fecha": "Hace 4 meses"
+  },
+  {
+    "autor": "Cliente de muestra 4",
+    "credencial": "9 reseñas",
+    "estrellas": 4,
+    "texto": "Muy rico todo. Solo que hay que llegar temprano el domingo porque el brisket se acaba.",
+    "fecha": "Hace 5 meses"
+  },
+  {
+    "autor": "Cliente de muestra 5",
+    "credencial": "Local Guide · 31 reseñas",
+    "estrellas": 5,
+    "texto": "El salmón a la brasa me sorprendió, no esperaba pescado así en un lugar de parrilla.",
+    "fecha": "Hace 6 meses"
+  },
+  {
+    "autor": "Cliente de muestra 6",
+    "credencial": "24 reseñas",
+    "estrellas": 5,
+    "texto": "Las papas con queso y tocineta son peligrosas. Y la atención muy amable.",
+    "fecha": "Hace 7 meses"
+  }
+]

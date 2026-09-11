@@ -1,0 +1,47 @@
+[
+  {
+    "id": "clasicas-2x",
+    "titulo": "2 Clásicas al Humo",
+    "detalle": "Dos hamburguesas clásicas",
+    "precio": 8500,
+    "gancho": "2x",
+    "restriccion": "No incluye papas.",
+    "hasta": null
+  },
+  {
+    "id": "combo-brisket",
+    "titulo": "Brasa & Humo + papas + bebida",
+    "detalle": "La de la casa, completa",
+    "precio": 11900,
+    "gancho": "Combo",
+    "restriccion": "Bebida a escoger entre gaseosa o té frío.",
+    "hasta": null
+  },
+  {
+    "id": "costilla-martes",
+    "titulo": "Costilla de Cerdo con acompañamiento",
+    "detalle": "Martes de costilla",
+    "precio": 9900,
+    "gancho": "Martes",
+    "restriccion": "Solo martes, hasta agotar existencias.",
+    "hasta": null
+  },
+  {
+    "id": "alitas-papas",
+    "titulo": "Alitas Ahumadas + Papas de la Casa",
+    "detalle": "Ocho alitas con papas",
+    "precio": 7500,
+    "gancho": "-15%",
+    "restriccion": "Salsa aparte.",
+    "hasta": null
+  },
+  {
+    "id": "tabla-dos",
+    "titulo": "Tabla para dos",
+    "detalle": "Brisket, costilla y chorizo con un acompañamiento",
+    "precio": 15900,
+    "gancho": "Para 2",
+    "restriccion": "No incluye bebidas.",
+    "hasta": null
+  }
+]

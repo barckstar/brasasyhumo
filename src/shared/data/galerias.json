@@ -1,0 +1,781 @@
+{
+  "brasa-humo": {
+    "portada": {
+      "src": "/platos/galeria/angus-1.webp",
+      "alt": "Hamburguesa de res a la parrilla en primer plano, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/burger-fuego.mp4",
+        "poster": "/platos/videos/burger-fuego-poster.webp",
+        "alt": "Hamburguesa a la parrilla entre llamas en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/angus-1.webp",
+        "alt": "Hamburguesa de res a la parrilla en primer plano, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/angus-2.webp",
+        "alt": "Hamburguesa de res en pan con ajonjolí sobre tabla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/angus.webp",
+        "alt": "Hamburguesa Angus en pan artesanal en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/angus-3.webp",
+        "alt": "Hamburguesa con queso derretido y pan brioche, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "costilla-res-burger": {
+    "portada": {
+      "src": "/platos/galeria/doble-torta-1.webp",
+      "alt": "Hamburguesa doble sobre tabla, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/burger-cortada.mp4",
+        "poster": "/platos/videos/burger-cortada-poster.webp",
+        "alt": "Queso derretido cayendo sobre la hamburguesa en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/doble-torta-1.webp",
+        "alt": "Hamburguesa doble sobre tabla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/doble-torta-2.webp",
+        "alt": "Dos hamburguesas con queso, lechuga y tomate, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/doble-torta.webp",
+        "alt": "Hamburguesa doble torta en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/doble-torta-3.webp",
+        "alt": "Hamburguesa doble con queso, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "doble-ahumada": {
+    "portada": {
+      "src": "/platos/galeria/economica-1.webp",
+      "alt": "Hamburguesa con queso y papas fritas, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/economica-1.webp",
+        "alt": "Hamburguesa con queso y papas fritas, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/economica-2.webp",
+        "alt": "Hamburguesa con papas servida sobre papel, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/economica.webp",
+        "alt": "Hamburguesa económica en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/economica-3.webp",
+        "alt": "Hamburguesa con tocineta en pan brioche, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/economica-4.webp",
+        "alt": "Hamburguesa vista de cerca, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "costilla-cerdo-burger": {
+    "portada": {
+      "src": "/platos/galeria/costilla-burger-1.webp",
+      "alt": "Hamburguesa con tocineta, lechuga y tomate, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/burger-girando.mp4",
+        "poster": "/platos/videos/burger-girando-poster.webp",
+        "alt": "Hamburguesa con queso girando en primer plano en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/costilla-burger-1.webp",
+        "alt": "Hamburguesa con tocineta, lechuga y tomate, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/costilla-burger-2.webp",
+        "alt": "Hamburguesa en tabla de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/costilla-burger.webp",
+        "alt": "Hamburguesa de costilla en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/costilla-burger-3.webp",
+        "alt": "Hamburguesa con queso derretido, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "hongos-tocineta": {
+    "portada": {
+      "src": "/platos/galeria/cheeseburger-1.webp",
+      "alt": "Cheeseburger sobre tabla de madera, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/soplete.mp4",
+        "poster": "/platos/videos/soplete-poster.webp",
+        "alt": "Queso derritiendose sobre la carne en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/cheeseburger-1.webp",
+        "alt": "Cheeseburger sobre tabla de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/cheeseburger-2.webp",
+        "alt": "Cheeseburger servida en plato, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/cheeseburger.webp",
+        "alt": "Cheeseburger en pan artesanal en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/hongos-tocineta-9.webp",
+        "alt": "Hamburguesa con queso e ingredientes frescos, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "pulled-pork": {
+    "portada": {
+      "src": "/platos/galeria/pulled-pork-1.webp",
+      "alt": "Hamburguesa de cerdo desmenuzado con repollo, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pulled-pork-1.webp",
+        "alt": "Hamburguesa de cerdo desmenuzado con repollo, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pulled-pork-2.webp",
+        "alt": "Emparedado de cerdo desmenuzado servido en papel, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/pulled-pork.webp",
+        "alt": "Hamburguesa de cerdo mechado en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pulled-pork-3.webp",
+        "alt": "Hamburguesa de cerdo desmenuzado, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pulled-pork-4.webp",
+        "alt": "Emparedado de cerdo con queso, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "pollo-ahumado": {
+    "portada": {
+      "src": "/platos/galeria/de-pollo-1.webp",
+      "alt": "Hamburguesa servida en el restaurante, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/pollo-parrilla.mp4",
+        "poster": "/platos/videos/pollo-parrilla-poster.webp",
+        "alt": "Pollo a la parrilla en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/de-pollo-1.webp",
+        "alt": "Hamburguesa servida en el restaurante, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/de-pollo-2.webp",
+        "alt": "Hamburguesa vista de cerca, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/de-pollo.webp",
+        "alt": "Hamburguesa de pollo en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/de-pollo-3.webp",
+        "alt": "Hamburguesa servida en plato, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "clasica-humo": {
+    "portada": {
+      "src": "/platos/galeria/tradicional-1.webp",
+      "alt": "Hamburguesa tradicional en primer plano, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/burger-armado.mp4",
+        "poster": "/platos/videos/burger-armado-poster.webp",
+        "alt": "Armado de una hamburguesa en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/tradicional-1.webp",
+        "alt": "Hamburguesa tradicional en primer plano, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/tradicional-2.webp",
+        "alt": "Hamburguesa sencilla vista de cerca, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/tradicional.webp",
+        "alt": "Hamburguesa tradicional en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/tradicional-3.webp",
+        "alt": "Hamburguesa sencilla sobre tabla de madera, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "camaron-crocante": {
+    "portada": {
+      "src": "/platos/galeria/mar-y-tierra-1.webp",
+      "alt": "Hamburguesa con camarones y papas en tabla de madera, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/mar-y-tierra-1.webp",
+        "alt": "Hamburguesa con camarones y papas en tabla de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/mar-y-tierra-2.webp",
+        "alt": "Hamburguesa con camarones y queso, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/mar-y-tierra-4.webp",
+        "alt": "Hamburguesa alta con vegetales frescos, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/mar-y-tierra-5.webp",
+        "alt": "Hamburguesa doble con queso derretido, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/camaron-crocante-9.webp",
+        "alt": "Hamburguesa con papas vista de cerca, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "tabla-brasa": {
+    "portada": {
+      "src": "/platos/galeria/surtida-grande-1.webp",
+      "alt": "Surtido de carnes asadas a la parrilla, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/costillas-flameadas.mp4",
+        "poster": "/platos/videos/costillas-flameadas-poster.webp",
+        "alt": "Costillas flameadas a la parrilla en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/surtida-grande-1.webp",
+        "alt": "Surtido de carnes asadas a la parrilla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/surtida-grande-2.webp",
+        "alt": "Carne asándose sobre la parrilla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/surtida-grande.webp",
+        "alt": "Tabla de carnes surtidas para compartir, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/surtida-grande-3.webp",
+        "alt": "Carnes surtidas asándose a la parrilla, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "brisket": {
+    "portada": {
+      "src": "/platos/galeria/surtida-pequena-1.webp",
+      "alt": "Costillas y pinchos en la parrilla, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/surtida-carnes.mp4",
+        "poster": "/platos/videos/surtida-carnes-poster.webp",
+        "alt": "Surtido de carnes a la parrilla en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/surtida-pequena-1.webp",
+        "alt": "Costillas y pinchos en la parrilla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/surtida-pequena-2.webp",
+        "alt": "Costillas servidas en plato, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/surtida-pequena.webp",
+        "alt": "Brisket ahumado cortado al momento, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/surtida-pequena-3.webp",
+        "alt": "Cortes de carne sobre la parrilla al fuego, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "costilla-cerdo": {
+    "portada": {
+      "src": "/platos/galeria/costilla-cerdo-1.webp",
+      "alt": "Costillas a la parrilla sobre tabla de madera, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/parrilla-llamas.mp4",
+        "poster": "/platos/videos/parrilla-llamas-poster.webp",
+        "alt": "Carne sobre la parrilla al fuego en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/costilla-cerdo-1.webp",
+        "alt": "Costillas a la parrilla sobre tabla de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/costilla-cerdo-2.webp",
+        "alt": "Costillas de cerdo jugosas en primer plano, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/costilla-cerdo.webp",
+        "alt": "Costilla de cerdo a la parrilla en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/costilla-cerdo-3.webp",
+        "alt": "Costillas de cerdo con salsa y encurtidos, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "pinchos-mixtos": {
+    "portada": {
+      "src": "/platos/galeria/pinchos-1.webp",
+      "alt": "Pinchos de carne sobre soporte de madera, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/pinchos-brochetas.mp4",
+        "poster": "/platos/videos/pinchos-brochetas-poster.webp",
+        "alt": "Pinchos a la parrilla en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pinchos-1.webp",
+        "alt": "Pinchos de carne sobre soporte de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pinchos-2.webp",
+        "alt": "Pinchos de pollo a la parrilla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/pinchos.webp",
+        "alt": "Pinchos de dos unidades servidos, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/pinchos-3.webp",
+        "alt": "Pinchos de carne sobre la parrilla, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "alitas-ahumadas": {
+    "portada": {
+      "src": "/platos/galeria/alitas-1.webp",
+      "alt": "Alitas picantes con salsa cremosa en plato, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/alitas.mp4",
+        "poster": "/platos/videos/alitas-poster.webp",
+        "alt": "Alitas crujientes con salsa para mojar en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/alitas-1.webp",
+        "alt": "Alitas picantes con salsa cremosa en plato, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/alitas-2.webp",
+        "alt": "Alitas crujientes con salsa para mojar, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/alitas.webp",
+        "alt": "Alitas de pollo en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/alitas-3.webp",
+        "alt": "Alitas crujientes con limón, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "papas-queso-tocineta": {
+    "portada": {
+      "src": "/platos/galeria/cartucho-1.webp",
+      "alt": "Papas con queso derretido y tocineta en cartucho de papel, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/cartucho-1.webp",
+        "alt": "Papas con queso derretido y tocineta en cartucho de papel, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/cartucho-2.webp",
+        "alt": "Papas cubiertas de carne desmenuzada, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/cartucho.webp",
+        "alt": "Cartucho en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/cartucho-3.webp",
+        "alt": "Papas con queso, carne y jalapeños, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/cartucho-4.webp",
+        "alt": "Papas con queso derretido y tocineta, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "papas-rusticas": {
+    "portada": {
+      "src": "/platos/galeria/papas-gajos-1.webp",
+      "alt": "Papas en gajos doradas con salsa para mojar, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-gajos-1.webp",
+        "alt": "Papas en gajos doradas con salsa para mojar, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-gajos-2.webp",
+        "alt": "Papas en gajos crujientes en bandeja, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/papas-gajos.webp",
+        "alt": "Orden de papas en gajos en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-gajos-3.webp",
+        "alt": "Papas en gajos asadas, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-gajos-4.webp",
+        "alt": "Papas en gajos recién horneadas, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "papas-brasa": {
+    "portada": {
+      "src": "/platos/galeria/papas-especiales-1.webp",
+      "alt": "Papas fritas crujientes con salsas para mojar, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/papas-salsa.mp4",
+        "poster": "/platos/videos/papas-salsa-poster.webp",
+        "alt": "Papas con salsas en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-especiales-1.webp",
+        "alt": "Papas fritas crujientes con salsas para mojar, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-especiales-2.webp",
+        "alt": "Papas fritas con salsa de tomate en plato, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/papas-especiales.webp",
+        "alt": "Papas especiales en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/papas-especiales-3.webp",
+        "alt": "Papas fritas doradas, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "chorizo-ahumado": {
+    "portada": {
+      "src": "/platos/galeria/choripan-1.webp",
+      "alt": "Chorizos a la parrilla sobre tabla de madera, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/choripan-1.webp",
+        "alt": "Chorizos a la parrilla sobre tabla de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/choripan-2.webp",
+        "alt": "Chorizos a la parrilla sobre las brasas, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/choripan.webp",
+        "alt": "Choripán en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/choripan-3.webp",
+        "alt": "Chorizos asándose en la parrilla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/choripan-4.webp",
+        "alt": "Chorizos dorados sobre las brasas, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "chicharron-brasa": {
+    "portada": {
+      "src": "/platos/galeria/canasta-chicharron-1.webp",
+      "alt": "Chicharrón servido en tabla de madera, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/canasta-chicharron-1.webp",
+        "alt": "Chicharrón servido en tabla de madera, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/canasta-chicharron-2.webp",
+        "alt": "Trozos de cerdo frito servidos en canasta, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/canasta-chicharron.webp",
+        "alt": "Canasta de chicharrón en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/canasta-chicharron-3.webp",
+        "alt": "Chicharrón servido en tazón blanco, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/canasta-chicharron-4.webp",
+        "alt": "Chicharrones crujientes vistos de cerca, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "nachos-ahumados": {
+    "portada": {
+      "src": "/platos/galeria/nachos-1.webp",
+      "alt": "Nachos con queso y jalapeños, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "video",
+        "src": "/platos/videos/nachos-queso.mp4",
+        "poster": "/platos/videos/nachos-queso-poster.webp",
+        "alt": "Nachos con queso y jalapeños en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/nachos-1.webp",
+        "alt": "Nachos con queso y jalapeños, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/nachos-2.webp",
+        "alt": "Nachos con queso y salsa, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/fotos/nachos.webp",
+        "alt": "Nachos en Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/nachos-3.webp",
+        "alt": "Nachos servidos en plato, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "salmon-brasa": {
+    "portada": {
+      "src": "/platos/galeria/salmon-brasa-1.webp",
+      "alt": "Lomo de salmón a la parrilla con limón, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/salmon-brasa-1.webp",
+        "alt": "Lomo de salmón a la parrilla con limón, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/salmon-brasa-2.webp",
+        "alt": "Salmón asándose sobre la parrilla con cítricos, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/salmon-brasa-3.webp",
+        "alt": "Filete de salmón sellado sobre las brasas, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/salmon-brasa-4.webp",
+        "alt": "Salmón entre el humo de la parrilla, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/salmon-brasa-5.webp",
+        "alt": "Salmón servido con vegetales y limón, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "atun-sellado": {
+    "portada": {
+      "src": "/platos/galeria/atun-sellado-1.webp",
+      "alt": "Atún sellado con aguacate y mango, Brasa & Humo, San José"
+    },
+    "medios": [
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/atun-sellado-1.webp",
+        "alt": "Atún sellado con aguacate y mango, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/atun-sellado-2.webp",
+        "alt": "Atún sellado en plato de restaurante, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/atun-sellado-3.webp",
+        "alt": "Atún en tataki con salsa de mango, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/atun-sellado-4.webp",
+        "alt": "Atún cortado en láminas, Brasa & Humo, San José"
+      },
+      {
+        "tipo": "imagen",
+        "src": "/platos/galeria/atun-sellado-5.webp",
+        "alt": "Ensalada con atún sellado, Brasa & Humo, San José"
+      }
+    ]
+  },
+  "oferta-clasicas-2x": {
+    "portada": {
+      "src": "/platos/galeria/tradicional-1.webp",
+      "alt": "Hamburguesa tradicional en primer plano, Brasa & Humo, San José"
+    },
+    "medios": [],
+    "heredaDe": "clasica-humo"
+  },
+  "oferta-combo-brisket": {
+    "portada": {
+      "src": "/platos/galeria/angus-1.webp",
+      "alt": "Hamburguesa de res a la parrilla en primer plano, Brasa & Humo, San José"
+    },
+    "medios": [],
+    "heredaDe": "brasa-humo"
+  },
+  "oferta-costilla-martes": {
+    "portada": {
+      "src": "/platos/galeria/costilla-cerdo-1.webp",
+      "alt": "Costillas a la parrilla sobre tabla de madera, Brasa & Humo, San José"
+    },
+    "medios": [],
+    "heredaDe": "costilla-cerdo"
+  },
+  "oferta-alitas-papas": {
+    "portada": {
+      "src": "/platos/galeria/alitas-1.webp",
+      "alt": "Alitas picantes con salsa cremosa en plato, Brasa & Humo, San José"
+    },
+    "medios": [],
+    "heredaDe": "alitas-ahumadas"
+  },
+  "oferta-tabla-dos": {
+    "portada": {
+      "src": "/platos/galeria/surtida-grande-1.webp",
+      "alt": "Surtido de carnes asadas a la parrilla, Brasa & Humo, San José"
+    },
+    "medios": [],
+    "heredaDe": "tabla-brasa"
+  }
+}

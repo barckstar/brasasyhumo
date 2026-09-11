@@ -1,0 +1,204 @@
+[
+  {
+    "id": "brasa-humo",
+    "nombre": "Brasa & Humo",
+    "descripcion": "Brisket ahumado doce horas sobre leña de guayabo, con queso ahumado y cebolla curada. La que le da el nombre a la casa.",
+    "ingredientes": [],
+    "precio": 8500,
+    "categoria": "ahumadas",
+    "destacado": true,
+    "disponible": true
+  },
+  {
+    "id": "costilla-res-burger",
+    "nombre": "Costilla de Res",
+    "descripcion": "Costilla de res deshebrada tras una noche en el ahumador, con salsa de la casa y encurtidos.",
+    "ingredientes": [],
+    "precio": 7900,
+    "categoria": "ahumadas",
+    "destacado": true,
+    "disponible": true
+  },
+  {
+    "id": "doble-ahumada",
+    "nombre": "Doble Ahumada",
+    "descripcion": "Dos tortas selladas al carbón, doble queso y tocineta ahumada. Para cuando una no alcanza.",
+    "ingredientes": [],
+    "precio": 7500,
+    "categoria": "ahumadas",
+    "disponible": true
+  },
+  {
+    "id": "costilla-cerdo-burger",
+    "nombre": "Costilla de Cerdo Ahumada",
+    "descripcion": "Costilla de cerdo deshuesada y glaseada al humo, con repollo crujiente encima.",
+    "ingredientes": [],
+    "precio": 6900,
+    "categoria": "ahumadas",
+    "destacado": true,
+    "disponible": true
+  },
+  {
+    "id": "hongos-tocineta",
+    "nombre": "Hongos y Tocineta",
+    "descripcion": "Hongos salteados en mantequilla de ajo, tocineta ahumada y queso derretido.",
+    "ingredientes": [],
+    "precio": 5900,
+    "categoria": "ahumadas",
+    "disponible": true
+  },
+  {
+    "id": "pulled-pork",
+    "nombre": "Pulled Pork Ahumado",
+    "descripcion": "Cerdo desmenuzado después de diez horas de ahumador, suave y con salsa agridulce.",
+    "ingredientes": [],
+    "precio": 5900,
+    "categoria": "ahumadas",
+    "disponible": true
+  },
+  {
+    "id": "pollo-ahumado",
+    "nombre": "Pollo Ahumado",
+    "descripcion": "Pechuga marinada en salmuera y terminada al humo. Jugosa, sin quedar seca.",
+    "ingredientes": [],
+    "precio": 5200,
+    "categoria": "ahumadas",
+    "disponible": true
+  },
+  {
+    "id": "clasica-humo",
+    "nombre": "Clásica al Humo",
+    "descripcion": "Carne, queso, lechuga y tomate en pan brioche. La de siempre, pasada por el carbón.",
+    "ingredientes": [],
+    "precio": 4900,
+    "categoria": "ahumadas",
+    "disponible": true
+  },
+  {
+    "id": "salmon-brasa",
+    "nombre": "Salmón a la Brasa",
+    "descripcion": "Lomo de salmón sellado sobre la parrilla de leña, con mantequilla de limón y hierbas.",
+    "ingredientes": [],
+    "precio": 9900,
+    "categoria": "delmar",
+    "disponible": true
+  },
+  {
+    "id": "atun-sellado",
+    "nombre": "Atún Sellado",
+    "descripcion": "Atún sellado por fuera y rosado por dentro, con alioli de chile dulce y ajonjolí.",
+    "ingredientes": [],
+    "precio": 8900,
+    "categoria": "delmar",
+    "disponible": true
+  },
+  {
+    "id": "camaron-crocante",
+    "nombre": "Camarón Crocante",
+    "descripcion": "Camarones apanados y fritos al momento, con salsa de la casa y repollo morado.",
+    "ingredientes": [],
+    "precio": 7900,
+    "categoria": "delmar",
+    "disponible": true
+  },
+  {
+    "id": "tabla-brasa",
+    "nombre": "Tabla Brasa & Humo",
+    "descripcion": "Brisket, costilla de cerdo, chorizo y pollo ahumado con dos acompañamientos. Alcanza para tres o cuatro.",
+    "ingredientes": [],
+    "precio": 22000,
+    "categoria": "parrilla",
+    "destacado": true,
+    "disponible": true
+  },
+  {
+    "id": "brisket",
+    "nombre": "Brisket por libra",
+    "descripcion": "Pecho de res ahumado doce horas, cortado al momento. Se vende por peso.",
+    "ingredientes": [],
+    "precio": 12500,
+    "categoria": "parrilla",
+    "disponible": true
+  },
+  {
+    "id": "costilla-cerdo",
+    "nombre": "Costilla de Cerdo",
+    "descripcion": "Media costilla glaseada al humo, tierna hasta soltarse del hueso.",
+    "ingredientes": [],
+    "precio": 8900,
+    "categoria": "parrilla",
+    "disponible": true
+  },
+  {
+    "id": "pinchos-mixtos",
+    "nombre": "Pinchos Mixtos",
+    "descripcion": "Tres pinchos surtidos de res, cerdo y pollo, directo de la parrilla.",
+    "ingredientes": [],
+    "precio": 6500,
+    "categoria": "parrilla",
+    "disponible": true
+  },
+  {
+    "id": "alitas-ahumadas",
+    "nombre": "Alitas Ahumadas",
+    "descripcion": "Ocho alitas ahumadas y terminadas a la parrilla, con salsa aparte.",
+    "ingredientes": [],
+    "precio": 5500,
+    "categoria": "parrilla",
+    "disponible": true
+  },
+  {
+    "id": "papas-queso-tocineta",
+    "nombre": "Papas con Queso y Tocineta",
+    "descripcion": "Papas rústicas cubiertas de queso derretido y tocineta ahumada.",
+    "ingredientes": [],
+    "precio": 3200,
+    "categoria": "acompanamientos",
+    "disponible": true
+  },
+  {
+    "id": "chorizo-ahumado",
+    "nombre": "Chorizo Ahumado",
+    "descripcion": "Chorizo de la casa ahumado y terminado a la parrilla, con chimichurri.",
+    "ingredientes": [],
+    "precio": 3500,
+    "categoria": "acompanamientos",
+    "disponible": true
+  },
+  {
+    "id": "papas-rusticas",
+    "nombre": "Papas Rústicas",
+    "descripcion": "Papas en gajos con piel, sazonadas y horneadas hasta dorar.",
+    "ingredientes": [],
+    "precio": 2200,
+    "categoria": "acompanamientos",
+    "disponible": true
+  },
+  {
+    "id": "papas-brasa",
+    "nombre": "Papas de la Casa",
+    "descripcion": "Papas fritas al corte fino, con la sal ahumada de la casa.",
+    "ingredientes": [],
+    "precio": 1900,
+    "categoria": "acompanamientos",
+    "disponible": true
+  },
+  {
+    "id": "chicharron-brasa",
+    "nombre": "Chicharrón de la Brasa",
+    "descripcion": "Costilla de cerdo frita en su propia grasa, crujiente por fuera y jugosa adentro.",
+    "ingredientes": [],
+    "precio": 3900,
+    "categoria": "acompanamientos",
+    "disponible": true
+  },
+  {
+    "id": "nachos-ahumados",
+    "nombre": "Nachos Ahumados",
+    "descripcion": "Tortillas crujientes con queso fundido, frijoles y brisket desmenuzado.",
+    "ingredientes": [],
+    "precio": 4200,
+    "categoria": "acompanamientos",
+    "disponible": true
+  }
+]

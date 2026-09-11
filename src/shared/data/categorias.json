@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ofertas",
+    "nombre": "Ofertas"
+  },
+  {
+    "id": "ahumadas",
+    "nombre": "Hamburguesas Ahumadas",
+    "corto": "Ahumadas"
+  },
+  {
+    "id": "delmar",
+    "nombre": "Del Mar",
+    "corto": "Del Mar"
+  },
+  {
+    "id": "parrilla",
+    "nombre": "Parrilla y Ahumados",
+    "corto": "Parrilla"
+  },
+  {
+    "id": "acompanamientos",
+    "nombre": "Acompañamientos",
+    "corto": "Acompañar"
+  }
+]

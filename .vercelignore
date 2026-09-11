@@ -1,0 +1,8 @@
+# Nada de esto hace falta para construir el sitio, y varias son notas internas
+# que no tienen por que viajar a un servidor de terceros.
+research/
+docs/
+.claude/
+scripts/
+*.md
+!README.md

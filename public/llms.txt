@@ -1,0 +1,32 @@
+# Brasa & Humo
+
+> Parrilla y ahumados en San José, Costa Rica.
+> "Ahumado lento, a fuego de leña."
+
+## AVISO
+
+Este negocio NO EXISTE. El sitio es una muestra para enseñar el producto, con
+una marca inventada. Los datos de contacto son deliberadamente inválidos: el
+teléfono empieza por 0, que no es un prefijo válido en Costa Rica, para que
+nadie reciba llamadas por error.
+
+## Qué ofrece el sitio
+
+- Menú completo con precios, en cuadrícula (/menu) y en video a pantalla
+  completa (/menu/video).
+- Cada plato lleva una galería de fotos y video que se recorre deslizando.
+- Carrito y pedido: el sitio arma el mensaje y el pedido se cierra por WhatsApp.
+  No se procesan pagos.
+- Favoritos guardados en el propio dispositivo.
+
+## Menú
+
+- Hamburguesas ahumadas (₡4.900 – ₡8.500)
+- Del mar: salmón, atún y camarón (₡7.900 – ₡9.900)
+- Parrilla y ahumados: brisket, costilla, pinchos, alitas (₡5.500 – ₡22.000)
+- Acompañamientos (₡1.900 – ₡4.200)
+
+## Horario
+
+Cerrado los lunes: es el día de preparar el ahumador.
+Martes a jueves 12:00–22:00 · Viernes y sábado 12:00–23:00 · Domingo 12:00–21:00
