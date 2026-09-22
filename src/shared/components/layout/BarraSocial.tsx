@@ -76,6 +76,9 @@ export function BarraSocial() {
         {/* Compartir cierra la barra: no es una red, es una accion. */}
         <li className="border-t border-acento/20 pt-4 sm:pt-5">
           <BotonCompartir className="group/enlace relative block rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-acento">
+            <span className="sr-only">
+              Compartir el sitio de {negocio.nombre}
+            </span>
             <span className="icono-social block text-acento">
               <IconoCompartir className="size-6 sm:size-7" />
             </span>
