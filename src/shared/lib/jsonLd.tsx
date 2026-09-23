@@ -18,9 +18,9 @@ import type { Plato } from "@/shared/types/menu";
  * silencio y el dato nunca aparece.
  */
 
-// `brasa-y-humo.vercel.app` ya es de otro restaurante: sin
-// `NEXT_PUBLIC_SITIO_URL` en Vercel esto no debe apuntar ahi (ver layout.tsx).
-const SITIO = process.env.NEXT_PUBLIC_SITIO_URL ?? "http://localhost:3000";
+// El dominio real. Ver la nota completa en layout.tsx.
+const SITIO =
+  process.env.NEXT_PUBLIC_SITIO_URL ?? "https://brasasyhumo.vercel.app";
 
 /** "24:00" no es hora valida en schema.org; el cierre de medianoche es "23:59". */
 function horaSchema(h: string): string {

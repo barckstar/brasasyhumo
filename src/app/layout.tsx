@@ -27,11 +27,13 @@ const sans = Inter({
   display: "swap",
 });
 
-// `brasa-y-humo.vercel.app` ya es de un restaurante real: no queda como
-// respaldo aqui ni en robots.ts/sitemap.ts/jsonLd.tsx/construirMensaje.ts.
-// SIN `NEXT_PUBLIC_SITIO_URL` en Vercel, sitemap, canonical y JSON-LD caen en
-// localhost, que es notoriamente roto en vez de silenciosamente incorrecto.
-const SITIO = process.env.NEXT_PUBLIC_SITIO_URL ?? "http://localhost:3000";
+// El dominio real, una vez que se supo cual era (no `brasa-y-humo.vercel.app`:
+// ese es de un restaurante real que existe). Mismo valor en robots.ts,
+// sitemap.ts, jsonLd.tsx y construirMensaje.ts. La fuente de verdad sigue
+// siendo `NEXT_PUBLIC_SITIO_URL` en Vercel — hay que ponerla ahi tambien,
+// para que las vistas previas de Vercel (rama, PR) no queden apuntando aqui.
+const SITIO =
+  process.env.NEXT_PUBLIC_SITIO_URL ?? "https://brasasyhumo.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITIO),
