@@ -6,12 +6,13 @@ import { IconoCarrito } from "@/shared/components/ui/Iconos";
 import { CurvaInferior } from "@/shared/components/ui/CurvaInferior";
 import { Brasas } from "@/shared/components/ui/Brasas";
 import { PruebaSocial } from "./PruebaSocial";
+import { LlamasHero } from "./LlamasHero";
 import { Revelar } from "@/shared/components/ui/Revelar";
 
 /*
   Orden en el eje Z, de atras hacia adelante:
     -z-20  resplandor de fondo
-    -z-10  la hamburguesa, a pantalla completa y muy atenuada
+    -z-10  la parrilla a opacidad plena, el velo del texto y las llamas
      z-0   las brasas, que asi parecen subir SOBRE el plato
      z-10  el texto y los botones, siempre por encima de todo
 */
@@ -28,14 +29,13 @@ export function Hero() {
       />
 
       {/*
-        Fondo de producto. Va detras de todo y muy transparente para que el
-        texto siga siendo lo que manda. El recorte original tiene un borde
-        recto donde la tabla toca el limite del lienzo, asi que se desvanece
-        con una mascara en los cuatro lados.
+        Fondo de producto, a OPACIDAD PLENA: la carne tiene que verse y dar
+        hambre. Lo que protege al texto es el velo de mas abajo, no una foto
+        apagada. La mascara funde los bordes con el fondo negro.
       */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 opacity-[0.17]"
+        className="absolute inset-0 -z-10"
         style={{
           // Caida larga y gradual. Con un corte tardio se veia el borde recto
           // del recorte justo donde termina la tabla de madera.
@@ -46,10 +46,9 @@ export function Hero() {
         }}
       >
         {/*
-          Version LIVIANA a proposito. Esta imagen se muestra al 17% de opacidad
-          y bajo una mascara que le difumina los bordes: a esa opacidad el
-          detalle no se percibe, asi que servir el original de 1672px era
-          regalar bytes que nadie ve.
+          ANTES era una version de 400px desenfocada (16 KB), pensada para
+          verse al 17% de opacidad. A opacidad plena eso se ve borroso, asi que
+          el origen es de 1600px y Next sirve el ancho justo por `sizes`.
 
           CON `priority`, y aqui hay una leccion.
 
@@ -59,20 +58,19 @@ export function Hero() {
           — el LCP empeoro de 4,8 a 5,0 s.
 
           Si un elemento va a ser el LCP igual, la unica salida es que llegue
-          rapido. Por eso: 400px, calidad 40 y desenfoque leve (16 KB en vez de
-          382), mas `priority` para que se precargue. A 17% de opacidad y bajo
-          la mascara, la diferencia visual con el original es nula.
+          rapido: `priority` para que se precargue y calidad 60, que es donde
+          la foto oscura deja de mostrar bloques.
 
-          `quality` explicito porque el optimizador de Next reprocesa la imagen:
-          sin esto volveria a subir la calidad y se perderia la ganancia.
+          `quality` debe estar en `images.qualities` de next.config.ts, o Next
+          lo ignora y sirve a 75.
         */}
         <Image
           src="/platos/hero-fondo.webp"
           alt=""
           fill
           priority
-          quality={40}
-          sizes="(max-width: 640px) 100vw, 800px"
+          quality={60}
+          sizes="100vw"
           /*
             `fill` y no width/height: con alto automatico el navegador no sabe
             cuanto espacio reservar hasta que la imagen carga, y al llegar
@@ -80,18 +78,8 @@ export function Hero() {
             shift de la pagina (CLS 0,111). Con `fill` el hueco queda reservado
             desde el primer pintado.
 
-            ENCUADRE CENTRADO, y esto ANTES NO SE PODIA.
-
-            Con el acento naranja el antetitulo —ambar a 12px, o sea texto
-            normal, que necesita 4.5:1— caia por debajo del minimo en cuanto la
-            foto aclaraba, y habia que correr el encuadre al 65% para meterlo
-            sobre una zona oscura.
-
-            Con el ambar de la paleta nueva el peor pixel de TODA la foto da
-            7.21:1. Ya no hay que esquivar nada: el encuadre se elige por como
-            se ve, no para salvar el contraste.
-
-            Si se cambia la foto del hero o el color de acento, VOLVER A MEDIR.
+            Si se cambia la foto, su opacidad, el velo o el color de acento,
+            VOLVER A MEDIR el contraste pixel a pixel (ver el velo).
           */
           className="object-cover"
         />
@@ -105,6 +93,24 @@ export function Hero() {
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 -z-10 h-1/4 bg-gradient-to-t from-base via-base/75 to-transparent sm:h-2/5"
       />
+
+      {/*
+        VELO SOLO DETRAS DEL TEXTO. Con la foto a opacidad plena, medido pixel
+        a pixel en 375x812: la bajada caia sobre la carne iluminada a 1.87:1 y
+        el antetitulo a 3.12:1, con 4.5 de minimo. Un velo parejo de 0.5 lo
+        resuelve pero apaga la foto entera, que es lo que se quiso evitar.
+        En movil el texto ocupa todo el ancho: el velo baja desde arriba y se
+        va antes de las llamas. Desde `sm` el texto vive a la izquierda y la
+        carne queda al centro-derecha, sin velo.
+        Con velo, peor pixel: movil antetitulo 4.55, bajada 5.74; 1440x900
+        antetitulo 5.21, bajada 6.85, "HUMO" 3.85 (texto grande, pide 3).
+      */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,5,5,0.62)_0%,rgba(5,5,5,0.5)_62%,transparent_88%)] sm:bg-[linear-gradient(90deg,rgba(5,5,5,0.7)_0%,rgba(5,5,5,0.5)_32%,transparent_62%)]"
+      />
+
+      <LlamasHero />
 
       <Brasas />
 

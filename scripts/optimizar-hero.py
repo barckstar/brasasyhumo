@@ -1,38 +1,31 @@
 """
 Genera el fondo del hero a partir de una foto grande.
 
-LA RECETA NO ES ARBITRARIA. La imagen se muestra al 17% de opacidad y bajo una
-mascara que le difumina los bordes (ver Hero.tsx): a esa opacidad el detalle no
-se percibe, asi que servir el original de ~1670px es regalar bytes que nadie ve.
+La foto se muestra a OPACIDAD PLENA (ver Hero.tsx): la carne tiene que verse.
+Hasta el 2026-09-22 se mostraba al 17% y esta receta la reducia a 400px con
+desenfoque (16 KB); a opacidad plena eso se ve borroso.
 
-Y esta imagen ES el LCP de la pagina — cubre el viewport entero, asi que va a
+Y esta imagen ES el LCP de la pagina: cubre el viewport entero, asi que va a
 ser el elemento mas grande pase lo que pase. Ya se probo ponerla en lazy
 esperando que el LCP pasara al titular: no funciono, empeoro de 4,8 a 5,0 s.
-La unica salida es que llegue rapido.
 
-De ahi los tres numeros: 400px de ancho, calidad 40 y desenfoque leve. El
-desenfoque no es estetico — suaviza el ruido y hace que WebP comprima mejor a
-calidad baja, sin que se note bajo la mascara.
+Por eso el ORIGEN es de 1600px a calidad 80 y el peso lo controla Next: sirve
+el ancho justo por `sizes` y a `quality={60}`. Aqui no se desenfoca.
 
-OJO: mantener el resultado en el orden de los 16 KB. Si sube mucho se pierde
-el trabajo de LCP que costo la sesion del 2026-09-01.
-
-Uso:  python scripts/optimizar-hero.py "ruta/a/la/foto.png"
+Uso:  python scripts/optimizar-hero.py "ruta/a/la/foto.jpg"
 """
 
 import os
 import sys
 
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+from PIL import Image, ImageEnhance, ImageOps
 
 SALIDA = "public/platos/hero-fondo.webp"
-ANCHO = 400
-CALIDAD = 40
-DESENFOQUE = 0.6
+ANCHO = 1600
+CALIDAD = 80
 # EL FONDO SE OSCURECE. Encima va el titular y un antetitulo naranja de 12px
-# —texto normal, necesita 4.5:1— y una foto bien iluminada se come el margen
-# aunque se muestre al 17% de opacidad. Medido sobre la foto de brisket: sin
-# oscurecer daba 3.94:1 en la franja del antetitulo.
+# —texto normal, necesita 4.5:1— y una foto bien iluminada se come el margen.
+# Aun oscurecida hace falta el velo de Hero.tsx, medido pixel a pixel.
 OSCURECER = 0.75
 
 
@@ -48,7 +41,6 @@ def main() -> None:
 
     alto = round(ANCHO * im.height / im.width)
     im = im.resize((ANCHO, alto), Image.LANCZOS)
-    im = im.filter(ImageFilter.GaussianBlur(DESENFOQUE))
     im = ImageEnhance.Brightness(im).enhance(OSCURECER)
 
     im.save(SALIDA, "WEBP", quality=CALIDAD, method=6)
