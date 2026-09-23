@@ -16,7 +16,8 @@ import "./globals.css";
 const display = Oswald({
   variable: "--fuente-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  // Variable, sin `weight`: con pesos sueltos Google a veces responde con URLs
+  // `/l/font?kit=…&skey=…` y Turbopack falla en dev ("queries have exactly one entry").
   display: "swap",
 });
 
