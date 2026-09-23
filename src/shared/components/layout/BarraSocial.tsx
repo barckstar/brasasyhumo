@@ -2,6 +2,8 @@ import {
   IconoFacebook,
   IconoInstagram,
   IconoLinkedIn,
+  IconoUpwork,
+  IconoFiverr,
   IconoWhatsApp,
   IconoMapa,
 } from "@/shared/components/ui/Iconos";
@@ -39,6 +41,8 @@ const redes = [
   { nombre: "Instagram", href: negocio.instagram, Icono: IconoInstagram },
   { nombre: "Facebook", href: negocio.facebook, Icono: IconoFacebook },
   { nombre: "LinkedIn", href: negocio.linkedin, Icono: IconoLinkedIn },
+  { nombre: "Upwork", href: negocio.upwork, Icono: IconoUpwork },
+  { nombre: "Fiverr", href: negocio.fiverr, Icono: IconoFiverr },
   { nombre: "Cómo llegar", href: enlaceMapa(), Icono: IconoMapa },
 ] as const;
 

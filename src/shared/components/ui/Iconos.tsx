@@ -57,6 +57,50 @@ export function IconoInstagram({ className = "size-6" }: IconoProps) {
   );
 }
 
+/*
+  Upwork y Fiverr no tienen una silueta reconocible en un solo trazo como
+  Facebook o WhatsApp: su logo real es texto estilizado. Se sigue el mismo
+  patron que IconoLinkedIn (cuadrado con "in") en vez de forzar el logo
+  original, que a `size-6` se vuelve ilegible.
+*/
+export function IconoUpwork({ className = "size-6" }: IconoProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <rect x="1" y="1" width="22" height="22" rx="5" fill="currentColor" />
+      <text
+        x="12"
+        y="16.5"
+        textAnchor="middle"
+        fontFamily="Arial, sans-serif"
+        fontWeight="700"
+        fontSize="11"
+        fill="var(--color-base, #050505)"
+      >
+        Up
+      </text>
+    </svg>
+  );
+}
+
+export function IconoFiverr({ className = "size-6" }: IconoProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <rect x="1" y="1" width="22" height="22" rx="5" fill="currentColor" />
+      <text
+        x="12"
+        y="16.5"
+        textAnchor="middle"
+        fontFamily="Arial, sans-serif"
+        fontWeight="700"
+        fontSize="10"
+        fill="var(--color-base, #050505)"
+      >
+        fi
+      </text>
+    </svg>
+  );
+}
+
 export function IconoMapa({ className = "size-6" }: IconoProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">

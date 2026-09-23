@@ -80,6 +80,10 @@ export const negocio = {
   instagram: "https://www.instagram.com/leonelbstar",
   linkedin: "https://www.linkedin.com/in/leo-cas/",
   instagramHandle: "@leonelbstar",
+  /* Upwork y Fiverr son donde se contrata, no solo donde se sigue: van en la
+     misma barra que las redes sociales. */
+  upwork: "https://www.upwork.com/freelancers/~016cebdf5051c1b48c",
+  fiverr: "https://www.fiverr.com/leonelgonzal192",
 
   /** Punto generico de Escazu. No es la direccion de nadie. */
   coordenadas: { lat: 9.9189, lng: -84.1417 },

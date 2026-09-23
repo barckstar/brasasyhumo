@@ -100,6 +100,22 @@ export function Footer() {
             >
               Facebook
             </a>
+            <a
+              href={negocio.upwork}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-acento-alt"
+            >
+              Upwork
+            </a>
+            <a
+              href={negocio.fiverr}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-acento-alt"
+            >
+              Fiverr
+            </a>
             <BotonCompartir className="inline-flex items-center gap-1.5 transition-colors hover:text-acento-alt">
               <IconoCompartir className="size-4" />
               Compartir

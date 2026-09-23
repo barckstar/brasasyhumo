@@ -27,8 +27,11 @@ const sans = Inter({
   display: "swap",
 });
 
-const SITIO =
-  process.env.NEXT_PUBLIC_SITIO_URL ?? "https://brasa-y-humo.vercel.app";
+// `brasa-y-humo.vercel.app` ya es de un restaurante real: no queda como
+// respaldo aqui ni en robots.ts/sitemap.ts/jsonLd.tsx/construirMensaje.ts.
+// SIN `NEXT_PUBLIC_SITIO_URL` en Vercel, sitemap, canonical y JSON-LD caen en
+// localhost, que es notoriamente roto en vez de silenciosamente incorrecto.
+const SITIO = process.env.NEXT_PUBLIC_SITIO_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITIO),

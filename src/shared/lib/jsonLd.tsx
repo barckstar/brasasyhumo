@@ -18,8 +18,9 @@ import type { Plato } from "@/shared/types/menu";
  * silencio y el dato nunca aparece.
  */
 
-const SITIO =
-  process.env.NEXT_PUBLIC_SITIO_URL ?? "https://brasa-y-humo.vercel.app";
+// `brasa-y-humo.vercel.app` ya es de otro restaurante: sin
+// `NEXT_PUBLIC_SITIO_URL` en Vercel esto no debe apuntar ahi (ver layout.tsx).
+const SITIO = process.env.NEXT_PUBLIC_SITIO_URL ?? "http://localhost:3000";
 
 /** "24:00" no es hora valida en schema.org; el cierre de medianoche es "23:59". */
 function horaSchema(h: string): string {
@@ -82,7 +83,13 @@ export function jsonLdRestaurante(): WithContext<Restaurant> {
           }
         : undefined,
 
-    sameAs: [negocio.facebook, negocio.instagram],
+    sameAs: [
+      negocio.facebook,
+      negocio.instagram,
+      negocio.linkedin,
+      negocio.upwork,
+      negocio.fiverr,
+    ],
 
     /*
       `hasDeliveryMethod` NO existe en Restaurant — lo atrapo el compilador.

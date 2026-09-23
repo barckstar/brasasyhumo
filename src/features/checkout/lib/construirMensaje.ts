@@ -22,8 +22,9 @@ type MensajePedido = {
  * El sitio donde vive esta muestra. Va dentro del mensaje de contacto para que
  * quien lo reciba sepa de cual de sus paginas vino.
  */
-const SITIO =
-  process.env.NEXT_PUBLIC_SITIO_URL ?? "https://brasa-y-humo.vercel.app";
+// `brasa-y-humo.vercel.app` ya es de otro restaurante: sin
+// `NEXT_PUBLIC_SITIO_URL` en Vercel esto no debe apuntar ahi (ver layout.tsx).
+const SITIO = process.env.NEXT_PUBLIC_SITIO_URL ?? "http://localhost:3000";
 
 function medir(texto: string): MensajePedido {
   const largoCodificado = encodeURIComponent(texto).length;
