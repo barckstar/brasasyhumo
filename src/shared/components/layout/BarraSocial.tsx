@@ -5,14 +5,8 @@ import {
   IconoUpwork,
   IconoFiverr,
   IconoWhatsApp,
-  IconoMapa,
 } from "@/shared/components/ui/Iconos";
-import {
-  enlaceMapa,
-  enlaceWhatsApp,
-  mensajeConsulta,
-  negocio,
-} from "@/shared/config/negocio";
+import { enlaceWhatsApp, mensajeConsulta, negocio } from "@/shared/config/negocio";
 import { BotonCompartir, IconoCompartir } from "@/shared/components/ui/BotonCompartir";
 
 /**
@@ -43,7 +37,6 @@ const redes = [
   { nombre: "LinkedIn", href: negocio.linkedin, Icono: IconoLinkedIn },
   { nombre: "Upwork", href: negocio.upwork, Icono: IconoUpwork },
   { nombre: "Fiverr", href: negocio.fiverr, Icono: IconoFiverr },
-  { nombre: "Cómo llegar", href: enlaceMapa(), Icono: IconoMapa },
 ] as const;
 
 export function BarraSocial() {
